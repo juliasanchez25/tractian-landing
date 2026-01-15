@@ -1,0 +1,225 @@
+{
+  "Navbar": {
+    "Solutions": {
+      "title": "Soluciones",
+      "categories": [
+        {
+          "title": "Monitoreo de Condición Tractian",
+          "items": [
+            {
+              "title": "Análisis y sensor de vibración",
+              "subtitle": "Herramientas para monitorear la salud de tus máquinas."
+            },
+            {
+              "title": "Detección de fallas con IA",
+              "subtitle": "Detecta problemas a tiempo, activa alertas automáticas."
+            },
+            {
+              "title": "Confiabilidad y análisis de causa raíz",
+              "subtitle": "Identifica el origen de la falla y fortalece tu confiabilidad."
+            },
+            {
+              "title": "Prevención de paros y reportes",
+              "subtitle": "Distingue patrones de falla y actúa con antecipación."
+            },
+            {
+              "title": "Especificaciones del sensor",
+              "subtitle": "Obtén datos de vibración, temperatura, horas y RPM"
+            }
+          ]
+        },
+        {
+          "title": "CMMS Tractian",
+          "items": [
+            {
+              "title": "Solución de problemas y SOPs",
+              "subtitle": "Guía a los técnicos con SOPs y listas de verificación inteligentes"
+            },
+            {
+              "title": "Gestión de órdenes de trabajo",
+              "subtitle": "Planifica, asigna y controla órdenes desde una plataforma"
+            },
+            {
+              "title": "Inventario de refacciones",
+              "subtitle": "Controla partes clave y vincúlalas con tareas"
+            },
+            {
+              "title": "Mantenimiento preventivo",
+              "subtitle": "Automatiza rutinas y reduce fallas críticas"
+            },
+            {
+              "title": "Integraciones",
+              "subtitle": "Conecta Tractian con ERPs y sensores"
+            }
+          ]
+        },
+        {
+          "title": "Tractian OEE",
+          "items": [
+            {
+              "title": "Seguimiento de producción con IA",
+              "subtitle": "Visualiza el estado de la producción y estaciones en tiempo real"
+            },
+            {
+              "title": "Rendimiento del operador",
+              "subtitle": "Conecta y capacita al personal de primera línea"
+            },
+            {
+              "title": "Calidad digitalizada",
+              "subtitle": "Digitaliza formularios y mediciones de calidad"
+            },
+            {
+              "title": "Cuadros de mando personalizados",
+              "subtitle": "Impulsa la operación con reportes en tiempo real"
+            },
+            {
+              "title": "Analítica de utilidades y procesos",
+              "subtitle": "Analiza el consumo energético y las métricas de proceso"
+            }
+          ]
+        }
+      ]
+    },
+    "Who We Serve": {
+      "title": "Industrias",
+      "categories": [
+        {
+          "title": "Por rol",
+          "items": [
+            "Gerente de planta",
+            "Ingeniero de confiabilidad",
+            "Ingeniero de mantenimiento"
+          ]
+        },
+        {
+          "title": "Por sector",
+          "items": [
+            "Automotriz y autopartes",
+            "Minería y Metales",
+            "Químicos",
+            "Molinos y agricultura",
+            "Alimentícia y Bebidas",
+            "Manufactura",
+            "Energético"
+          ]
+        }
+      ]
+    },
+    "Resources": {
+      "title": "Recursos",
+      "categories": [
+        {
+          "title": "Centro de Recursos",
+          "items": ["Casos de estudio", "Ebooks", "Blog", "Plantillas", "SOPs"]
+        },
+        {
+          "title": "Hub de Clientes",
+          "items": [
+            "Actualizaciones del producto",
+            "Tractian Academy",
+            "Centro de ayuda"
+          ]
+        }
+      ]
+    },
+    "Company": {
+      "title": "Compañía",
+      "categories": [
+        {
+          "title": "Sobre Tractian",
+          "items": ["Nosotros", "Carreras", "Sala de prensa"]
+        },
+        {
+          "title": "Otro",
+          "items": ["Contáctanos", "Programa de referidos", "Trust Center"]
+        }
+      ]
+    },
+    "Pricing": {
+      "title": "Precios",
+      "categories": [
+        {
+          "title": "Monitoreo de Condición"
+        },
+        {
+          "title": "Software CMMS"
+        }
+      ]
+    },
+    "Demo": "Solicita una demo"
+  },
+  "Homepage": {
+    "title": "Esta es una página principal",
+    "content": "Este es el contenido de la página"
+  },
+  "Footer": {
+    "onlineMonitoring": {
+      "title": "Monitoreo Online",
+      "links": {
+        "overview": "Visión General",
+        "insightsDiagnostics": "Insights y Diagnósticos",
+        "monitoredAssets": "Activos Monitoreados",
+        "vibrationAnalysis": "Análisis de Vibraciones",
+        "supervisory": "Supervisor"
+      }
+    },
+    "energyManagement": {
+      "title": "Gestión de Energía",
+      "links": {
+        "overview": "Monitoreo de Producción",
+        "assetPerformanceManagement": "Asset Performance Management",
+        "energyReports": "Informes de Energía",
+        "processMonitoring": "Monitoreo de Procesos",
+        "currentMonitoring": "Monitoreo de Corriente",
+        "energyEfficiency": "Eficiencia Energética",
+        "supervisory": "Supervisor"
+      }
+    },
+    "assetManagement": {
+      "title": "Gestión de Activos",
+      "links": {
+        "overview": "Visión General",
+        "planningAndScheduling": "Planeación y Programación",
+        "geolocation": "Geolocalização",
+        "workOrderManagement": "Gestión de Órdenes de Trabajo",
+        "inventoryControl": "Gestión de Materiales",
+        "automatedProcedures": "Procedimentos Automaticos",
+        "mobileApp": "Aplicación Móvil",
+        "indicatorsDashboard": "Indicadores Dashboards Mantenimiento"
+      }
+    },
+    "support": {
+      "title": "Soporte",
+      "links": {
+        "contactUs": "Hable con Nosotros",
+        "helpCenter": "Centro de Ayuda",
+        "policies": "Políticas",
+        "trustCenter": "Centro de Confianza"
+      }
+    },
+    "about": {
+      "title": "Sobre",
+      "links": {
+        "aboutUs": "Sobre Nosotros",
+        "careers": "Carreras",
+        "caseStudies": "Casos de Estudio",
+        "press": "Prensa",
+        "community": "Comunidad"
+      }
+    },
+    "downloadApp": {
+      "title": "Download Our App",
+      "links": {
+        "appleStore": "Apple Store",
+        "googlePlayStore": "Google Play Store",
+        "sapStore": "SAP Store"
+      }
+    },
+    "company": {
+      "title": "Tractian Tecnología Industrial S. de R.L. de C.V.",
+      "phone": "+52 (800) 953-8998"
+    },
+    "address": "Córdoba 23, Cuauhtémoc, 06700, Ciudad de México, CDMX",
+    "privacy": "Tus elecciones de privacidad"
+  }
+}

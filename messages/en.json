@@ -1,0 +1,241 @@
+{
+  "Navbar": {
+    "Solutions": {
+      "title": "Solutions",
+      "categories": [
+        {
+          "title": "Tractian Condition Monitoring",
+          "items": [
+            {
+              "title": "Vibration Sensor & Analysis",
+              "subtitle": "All the tools you need to remotely monitor machine health."
+            },
+            {
+              "title": "AI Failure Detection",
+              "subtitle": "Spot issues early, trigger automatic alerts."
+            },
+            {
+              "title": "Reliability & Root Cause Analysis",
+              "subtitle": "Get to the why faster, build your reliability program."
+            },
+            {
+              "title": "Downtime Prevention & Reporting",
+              "subtitle": "Uncover failure trends, act before breakdowns happen."
+            },
+            {
+              "title": "Sensor Specifications",
+              "subtitle": "Monitor real-time vibration, temperature, runtime, and RPM."
+            }
+          ]
+        },
+        {
+          "title": "Tractian CMMS",
+          "items": [
+            {
+              "title": "Troubleshooting & SOPs",
+              "subtitle": "Guide technicians with smart SOPs and checklists."
+            },
+            {
+              "title": "Work Order Management",
+              "subtitle": "Plan, assign, and track every work order in one place."
+            },
+            {
+              "title": "Parts Inventory Management",
+              "subtitle": "Track critical parts and link them to maintenance tasks."
+            },
+            {
+              "title": "Preventive Maintenance",
+              "subtitle": "Automate tasks, prevent failures, and cut downtime."
+            },
+            {
+              "title": "Integrations",
+              "subtitle": "Connect Tractian with ERPs, sensors, and data systems."
+            }
+          ]
+        },
+        {
+          "title": "Tractian OEE",
+          "items": [
+            {
+              "title": "AI Production Tracking",
+              "subtitle": "Get status of production, lines, stations with live insights."
+            },
+            {
+              "title": "Operator Performance",
+              "subtitle": "Connect and empower the frontline."
+            },
+            {
+              "title": "Digitized Quality",
+              "subtitle": "Take quality forms and measurements digital."
+            },
+            {
+              "title": "Custom Dashboards",
+              "subtitle": "Drive operations with real-time data reports."
+            },
+            {
+              "title": "Utility & Process Analytics",
+              "subtitle": "Analyze energy consumption and process metrics."
+            }
+          ]
+        }
+      ]
+    },
+    "Who We Serve": {
+      "title": "Who We Serve",
+      "categories": [
+        {
+          "title": "By Role",
+          "items": [
+            "Plant Manager",
+            "Reliability Engineer",
+            "Maintenance Engineer",
+            "Manufacturing Engineer"
+          ]
+        },
+        {
+          "title": "By Sector",
+          "items": [
+            "Automotive & Parts",
+            "Fleet",
+            "Manufacturing",
+            "Oil & Gas",
+            "Chemicals",
+            "Food & Beverage",
+            "Mills & Agriculture",
+            "Facilities",
+            "Heavy Equipment",
+            "Mining & Metals"
+          ]
+        }
+      ]
+    },
+    "Resources": {
+      "title": "Resources",
+      "categories": [
+        {
+          "title": "Resources Center",
+          "items": [
+            "Case Studies",
+            "Templates",
+            "SOPs",
+            "Ebooks",
+            "Calculators",
+            "ChatGPT Plugins",
+            "Blog",
+            "Events & Webinars"
+          ]
+        },
+        {
+          "title": "Customer Hub",
+          "items": ["Product Updates", "Tractian Academy", "Help Center"]
+        }
+      ]
+    },
+    "Company": {
+      "title": "Company",
+      "categories": [
+        {
+          "title": "About Tractian",
+          "items": ["About Us", "Careers", "Newsroom"]
+        },
+        {
+          "title": "Others",
+          "items": ["Contact Us", "Referrals", "Trust Center"]
+        }
+      ]
+    },
+    "Pricing": {
+      "title": "Pricing",
+      "categories": [
+        {
+          "title": "Condition Monitoring"
+        },
+        {
+          "title": "CMMS Software"
+        }
+      ]
+    },
+    "Demo": "Request a Demo"
+  },
+  "Homepage": {
+    "title": "This is a homepage",
+    "content": "This is the page content"
+  },
+  "Footer": {
+    "onlineMonitoring": {
+      "title": "Sensors",
+      "links": {
+        "conditionMonitoring": "Condition Monitoring",
+        "keyFeatures": "Key Features",
+        "insightsDiagnostics": "Insights and Diagnostics",
+        "vibrationSensor": "Vibration Sensor",
+        "compatibleAssets": "Compatible Assets",
+        "patentedTechnology": "Patented Technology",
+        "predictiveMaintenance": "Predictive Maintenance Software"
+      }
+    },
+    "assetManagement": {
+      "title": "CMMS",
+      "links": {
+        "aiPoweredCmms": "AI-Powered CMMS",
+        "inventoryManagement": "Best Inventory Management Software",
+        "preventiveMaintenance": "Preventive Maintenance Software",
+        "planningScheduling": "Planning and Scheduling",
+        "workOrderManagement": "Work Order Management",
+        "sparePartsManagement": "Spare Parts Management",
+        "checklistsSops": "Checklists/SOPs",
+        "reportingAnalytics": "Reporting and Analytics",
+        "mobileApp": "Mobile CMMS App",
+        "integrations": "Integrations"
+      }
+    },
+    "energyManagement": {
+      "title": "OEE",
+      "links": {
+        "productionMonitoring": "Production Monitoring",
+        "assetPerformanceManagement": "Asset Performance Management",
+        "energyReports": "Energy Reports",
+        "processMonitoring": "Process Monitoring",
+        "currentMonitoring": "Current Monitoring",
+        "utilityProcessAnalytics": "Utility & Process Analytics",
+        "customDashboards": "Custom Dashboards"
+      }
+    },
+    "support": {
+      "title": "Support",
+      "links": {
+        "contactUs": "Contact Us",
+        "helpCenter": "Help Center",
+        "policies": "Policies",
+        "trustCenter": "Trust Center",
+        "masterLicense": "Master License and Service Agreement",
+        "hostedSoftware": "Hosted Software SLA",
+        "hardwareWarranty": "Hardware Warranty Policy"
+      }
+    },
+    "about": {
+      "title": "About",
+      "links": {
+        "aboutUs": "About Us",
+        "referrals": "Referrals",
+        "careers": "Careers",
+        "caseStudies": "Case Studies",
+        "press": "Press"
+      }
+    },
+    "downloadApp": {
+      "title": "Download Our App",
+      "links": {
+        "appleStore": "Apple Store",
+        "googlePlayStore": "Google Play Store",
+        "sapStore": "SAP Store"
+      }
+    },
+    "company": {
+      "title": "TRACTIAN TECHNOLOGIES INC",
+      "phone": "+1 (833) GET-TRAC"
+    },
+    "address": "201 17th Street NW, Atlanta, GA 30363",
+    "privacy": "Your Privacy Choices"
+  }
+}

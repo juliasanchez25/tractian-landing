@@ -1,0 +1,229 @@
+{
+  "Navbar": {
+    "Solutions": {
+      "title": "Monitoramento de Condição",
+      "categories": [
+        {
+          "title": "Monitoramento de Condição",
+          "items": [
+            {
+              "title": "Sensor e Análise de Vibração",
+              "subtitle": "Monitoramento remoto da saúde do ativo"
+            },
+            {
+              "title": "Detecção de Falhas com IA",
+              "subtitle": "Identifique problemas cedo e receba alertas automáticos"
+            },
+            {
+              "title": "Confiabilidade e Análise de Causa Raiz",
+              "subtitle": "Acelere o diagnóstico, fortaleça seu plano de confiabilidade"
+            },
+            {
+              "title": "Prevenção de Downtime e Relatórios",
+              "subtitle": "Identifique tendências de falha e atue antes da quebra"
+            },
+            {
+              "title": "Especificações do Sensor",
+              "subtitle": "Vibração, temperatura, horímetro e RPM em tempo real"
+            }
+          ]
+        },
+        {
+          "title": "Software de Gestão",
+          "items": [
+            {
+              "title": "Checklists & POPs Inteligentes",
+              "subtitle": "Oriente as ações dos técnicos com um passo a passo"
+            },
+            {
+              "title": "Gestão de Ordens de Serviço",
+              "subtitle": "Planeje, atribua e acompanhe cada OS em um só lugar"
+            },
+            {
+              "title": "Gerenciamento de Estoque & Inventário",
+              "subtitle": "Controle peças críticas e as vincule às ações de manutenção"
+            },
+            {
+              "title": "Manutenção Preventiva",
+              "subtitle": "Automatize tarefas, previna falhas e reduza paradas"
+            },
+            {
+              "title": "Integrações",
+              "subtitle": "Conecte a Tractian a ERPs, sensores e sistemas de dados"
+            }
+          ]
+        },
+        {
+          "title": "Monitoramento de Produção",
+          "items": [
+            {
+              "title": "Monitoramento de Produção com IA",
+              "subtitle": "Acompanhe status da produção com insights na hora certa"
+            },
+            {
+              "title": "Performance do Operador",
+              "subtitle": "Conecte e capacite o time da linha de frente"
+            },
+            {
+              "title": "Qualidade Digitalizada",
+              "subtitle": "Digitalize formulários e medições de qualidade"
+            },
+            {
+              "title": "Dashboards Personalizados",
+              "subtitle": "Oriente a operação com relatórios em tempo real"
+            },
+            {
+              "title": "Análise de Utilidades & Processos",
+              "subtitle": "Analise consumo de energia e métricas de processo"
+            }
+          ]
+        }
+      ]
+    },
+    "Who We Serve": {
+      "title": "Por cargo",
+      "categories": [
+        {
+          "title": "Por cargo",
+          "items": ["Gerência", "Confiabilidade", "Manutenção"]
+        },
+        {
+          "title": "Por setor",
+          "items": [
+            "Automotiva",
+            "Mineração",
+            "Química",
+            "Usinas e Agrícola",
+            "Alimentícia & Bebidas",
+            "Papel e Celulose"
+          ]
+        }
+      ]
+    },
+    "Resources": {
+      "title": "Recursos",
+      "categories": [
+        {
+          "title": "Central de Recursos",
+          "items": [
+            "Estudos de Caso",
+            "Ebooks",
+            "Blog",
+            "Templates",
+            "POPs",
+            "GPTs para Manutenção"
+          ]
+        },
+        {
+          "title": "Central do Cliente",
+          "items": [
+            "Atualizações de Produto",
+            "Tractian Academy",
+            "Help Center"
+          ]
+        }
+      ]
+    },
+    "Company": {
+      "title": "A Tractian",
+      "categories": [
+        {
+          "title": "A Tractian",
+          "items": ["Sobre nós", "Carreiras", "Imprensa"]
+        },
+        {
+          "title": "Suporte",
+          "items": ["Entre em Contato", "Indicações", "Trust Center"]
+        }
+      ]
+    },
+    "Pricing": {
+      "title": "Pricing",
+      "categories": [
+        {
+          "title": "Sensor de Vibração"
+        },
+        {
+          "title": "Software de Gestão (CMMS)"
+        }
+      ]
+    },
+    "Demo": "Demonstração"
+  },
+  "Homepage": {
+    "title": "Esta é uma página inicial",
+    "content": "Este é o conteúdo da página"
+  },
+  "Footer": {
+    "onlineMonitoring": {
+      "title": "Monitoramento Online",
+      "links": {
+        "overview": "Visão Geral",
+        "insightsDiagnostics": "Insights e Diagnósticos",
+        "monitoredAssets": "Ativos Monitorados",
+        "vibrationAnalysis": "Análise de Vibração",
+        "supervisory": "Supervisório"
+      }
+    },
+    "energyManagement": {
+      "title": "Gestão de Energia",
+      "links": {
+        "overview": "Visão Geral",
+        "assetPerformanceManagement": "Asset Performance Management",
+        "energyReports": "Relatórios de Energia",
+        "processMonitoring": "Monitoramento de Processos",
+        "energyEfficiency": "Eficiência Energética",
+        "currentMonitoring": "Monitoramento de Corrente",
+        "supervisory": "Supervisório"
+      }
+    },
+    "assetManagement": {
+      "title": "Gestão de Ativos",
+      "links": {
+        "overview": "Visão Geral",
+        "planningAndScheduling": "Planejamento e Programação",
+        "geolocation": "Geolocalização",
+        "workOrderManagement": "Gestão de Ordens de Serviço",
+        "inventoryControl": "Controle de Estoque",
+        "automatedProcedures": "Procedimentos Automáticos",
+        "mobileApp": "Aplicativo Móvel",
+        "indicatorsDashboard": "Dashboard Indicadores Manutenção"
+      }
+    },
+    "support": {
+      "title": "Suporte",
+      "links": {
+        "contactUs": "Fale Conosco",
+        "helpCenter": "Central de Ajuda",
+        "policies": "Políticas",
+        "termsOfUse": "Termos de Uso",
+        "trustCenter": "Trust Center"
+      }
+    },
+    "about": {
+      "title": "Sobre",
+      "links": {
+        "aboutUs": "Sobre Nós",
+        "careers": "Carreiras",
+        "caseStudies": "Estudos de Caso",
+        "press": "Imprensa",
+        "community": "Comunidade"
+      }
+    },
+    "downloadApp": {
+      "title": "Download Our App",
+      "links": {
+        "appleStore": "Apple Store",
+        "googlePlayStore": "Google Play Store",
+        "sapStore": "SAP Store"
+      }
+    },
+    "company": {
+      "title": "© Tractian Tecnologia Ltda",
+      "cnpj": "CNPJ: 35.755.699/0001-84",
+      "phone": "0800 110 2020"
+    },
+    "address": "R. Amaro Guerra, 415 - Chácara Santo Antônio, São Paulo - SP, 04711-020",
+    "privacy": "Suas escolhas de privacidade"
+  }
+}
