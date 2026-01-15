@@ -80,7 +80,7 @@
         }
       ]
     },
-    "Who We Serve": {
+    "WhoWeServe": {
       "title": "Who We Serve",
       "categories": [
         {
@@ -155,7 +155,7 @@
         }
       ]
     },
-    "Demo": "Request a Demo"
+    "Demo": "Get Demo"
   },
   "Hero": {
     "subtitle": "Keep operations running. Hit your targets.",

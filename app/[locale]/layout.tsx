@@ -6,6 +6,7 @@ import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 import "./globals.css";
 import { Navbar } from "@/components/custom/navbar";
+import Footer from "@/components/custom/footer";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -36,7 +37,8 @@ export default async function RootLayout({
       <body className={`${inter.variable} antialiased`}>
         <NextIntlClientProvider>
           <Navbar />
-          {children}
+          <main className="bg-red-500 min-h-screen flex-1">{children}</main>
+          <Footer />
         </NextIntlClientProvider>
       </body>
     </html>
