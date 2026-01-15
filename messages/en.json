@@ -86,25 +86,25 @@
         {
           "title": "By Role",
           "items": [
-            "Plant Manager",
-            "Reliability Engineer",
-            "Maintenance Engineer",
-            "Manufacturing Engineer"
+            { "title": "Plant Manager" },
+            { "title": "Reliability Engineer" },
+            { "title": "Maintenance Engineer" },
+            { "title": "Manufacturing Engineer" }
           ]
         },
         {
           "title": "By Sector",
           "items": [
-            "Automotive & Parts",
-            "Fleet",
-            "Manufacturing",
-            "Oil & Gas",
-            "Chemicals",
-            "Food & Beverage",
-            "Mills & Agriculture",
-            "Facilities",
-            "Heavy Equipment",
-            "Mining & Metals"
+            { "title": "Automotive & Parts" },
+            { "title": "Fleet" },
+            { "title": "Manufacturing" },
+            { "title": "Oil & Gas" },
+            { "title": "Chemicals" },
+            { "title": "Food & Beverage" },
+            { "title": "Mills & Agriculture" },
+            { "title": "Facilities" },
+            { "title": "Heavy Equipment" },
+            { "title": "Mining & Metals" }
           ]
         }
       ]
@@ -115,19 +115,23 @@
         {
           "title": "Resources Center",
           "items": [
-            "Case Studies",
-            "Templates",
-            "SOPs",
-            "Ebooks",
-            "Calculators",
-            "ChatGPT Plugins",
-            "Blog",
-            "Events & Webinars"
+            { "title": "Case Studies" },
+            { "title": "Templates" },
+            { "title": "SOPs" },
+            { "title": "Ebooks" },
+            { "title": "Calculators" },
+            { "title": "ChatGPT Plugins" },
+            { "title": "Blog" },
+            { "title": "Events & Webinars" }
           ]
         },
         {
           "title": "Customer Hub",
-          "items": ["Product Updates", "Tractian Academy", "Help Center"]
+          "items": [
+            { "title": "Product Updates" },
+            { "title": "Tractian Academy" },
+            { "title": "Help Center" }
+          ]
         }
       ]
     },
@@ -136,11 +140,19 @@
       "categories": [
         {
           "title": "About Tractian",
-          "items": ["About Us", "Careers", "Newsroom"]
+          "items": [
+            { "title": "About Us" },
+            { "title": "Careers" },
+            { "title": "Newsroom" }
+          ]
         },
         {
           "title": "Others",
-          "items": ["Contact Us", "Referrals", "Trust Center"]
+          "items": [
+            { "title": "Contact Us" },
+            { "title": "Referrals" },
+            { "title": "Trust Center" }
+          ]
         }
       ]
     },

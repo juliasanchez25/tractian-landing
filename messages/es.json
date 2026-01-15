@@ -86,21 +86,21 @@
         {
           "title": "Por rol",
           "items": [
-            "Gerente de planta",
-            "Ingeniero de confiabilidad",
-            "Ingeniero de mantenimiento"
+            { "title": "Gerente de planta" },
+            { "title": "Ingeniero de confiabilidad" },
+            { "title": "Ingeniero de mantenimiento" }
           ]
         },
         {
           "title": "Por sector",
           "items": [
-            "Automotriz y autopartes",
-            "Minería y Metales",
-            "Químicos",
-            "Molinos y agricultura",
-            "Alimentícia y Bebidas",
-            "Manufactura",
-            "Energético"
+            { "title": "Automotriz y autopartes" },
+            { "title": "Minería y Metales" },
+            { "title": "Químicos" },
+            { "title": "Molinos y agricultura" },
+            { "title": "Alimentícia y Bebidas" },
+            { "title": "Manufactura" },
+            { "title": "Energético" }
           ]
         }
       ]
@@ -110,14 +110,20 @@
       "categories": [
         {
           "title": "Centro de Recursos",
-          "items": ["Casos de estudio", "Ebooks", "Blog", "Plantillas", "SOPs"]
+          "items": [
+            { "title": "Casos de estudio" },
+            { "title": "Ebooks" },
+            { "title": "Blog" },
+            { "title": "Plantillas" },
+            { "title": "SOPs" }
+          ]
         },
         {
           "title": "Hub de Clientes",
           "items": [
-            "Actualizaciones del producto",
-            "Tractian Academy",
-            "Centro de ayuda"
+            { "title": "Actualizaciones del producto" },
+            { "title": "Tractian Academy" },
+            { "title": "Centro de ayuda" }
           ]
         }
       ]
@@ -127,11 +133,19 @@
       "categories": [
         {
           "title": "Sobre Tractian",
-          "items": ["Nosotros", "Carreras", "Sala de prensa"]
+          "items": [
+            { "title": "Nosotros" },
+            { "title": "Carreras" },
+            { "title": "Sala de prensa" }
+          ]
         },
         {
           "title": "Otro",
-          "items": ["Contáctanos", "Programa de referidos", "Trust Center"]
+          "items": [
+            { "title": "Contáctanos" },
+            { "title": "Programa de referidos" },
+            { "title": "Trust Center" }
+          ]
         }
       ]
     },

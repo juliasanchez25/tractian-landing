@@ -5,7 +5,7 @@ import { hasLocale } from "next-intl";
 import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 import "./globals.css";
-import { Navbar } from "@/components/custom/navbar";
+import { NavRoot } from "@/components/custom/nav";
 import Footer from "@/components/custom/footer";
 
 const inter = Inter({
@@ -36,7 +36,7 @@ export default async function RootLayout({
     <html lang={locale}>
       <body className={`${inter.variable} antialiased`}>
         <NextIntlClientProvider>
-          <Navbar />
+          <NavRoot />
           <main className="bg-red-500 min-h-screen flex-1">{children}</main>
           <Footer />
         </NextIntlClientProvider>

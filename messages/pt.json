@@ -85,17 +85,21 @@
       "categories": [
         {
           "title": "Por cargo",
-          "items": ["Gerência", "Confiabilidade", "Manutenção"]
+          "items": [
+            { "title": "Gerência" },
+            { "title": "Confiabilidade" },
+            { "title": "Manutenção" }
+          ]
         },
         {
           "title": "Por setor",
           "items": [
-            "Automotiva",
-            "Mineração",
-            "Química",
-            "Usinas e Agrícola",
-            "Alimentícia & Bebidas",
-            "Papel e Celulose"
+            { "title": "Automotiva" },
+            { "title": "Mineração" },
+            { "title": "Química" },
+            { "title": "Usinas e Agrícola" },
+            { "title": "Alimentícia & Bebidas" },
+            { "title": "Papel e Celulose" }
           ]
         }
       ]
@@ -106,20 +110,20 @@
         {
           "title": "Central de Recursos",
           "items": [
-            "Estudos de Caso",
-            "Ebooks",
-            "Blog",
-            "Templates",
-            "POPs",
-            "GPTs para Manutenção"
+            { "title": "Estudos de Caso" },
+            { "title": "Ebooks" },
+            { "title": "Blog" },
+            { "title": "Templates" },
+            { "title": "POPs" },
+            { "title": "GPTs para Manutenção" }
           ]
         },
         {
           "title": "Central do Cliente",
           "items": [
-            "Atualizações de Produto",
-            "Tractian Academy",
-            "Help Center"
+            { "title": "Atualizações de Produto" },
+            { "title": "Tractian Academy" },
+            { "title": "Help Center" }
           ]
         }
       ]
@@ -129,11 +133,19 @@
       "categories": [
         {
           "title": "A Tractian",
-          "items": ["Sobre nós", "Carreiras", "Imprensa"]
+          "items": [
+            { "title": "Sobre nós" },
+            { "title": "Carreiras" },
+            { "title": "Imprensa" }
+          ]
         },
         {
           "title": "Suporte",
-          "items": ["Entre em Contato", "Indicações", "Trust Center"]
+          "items": [
+            { "title": "Entre em Contato" },
+            { "title": "Indicações" },
+            { "title": "Trust Center" }
+          ]
         }
       ]
     },
