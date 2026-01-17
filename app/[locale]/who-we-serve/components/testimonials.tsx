@@ -125,13 +125,13 @@ export function TestimonialsSection() {
                           src={item.photo || "/placeholder.svg"}
                           width={120}
                           height={120}
-                          className="font-bold text-body-sm"
+                          className="font-bold text-sm"
                         />
                       </figure>
                       <div className="flex w-full flex-1 flex-col">
-                        <p className="font-bold text-body-sm">{item.name}</p>
+                        <p className="font-bold text-sm">{item.name}</p>
                         <p className="text-body-sm">{item.role}</p>
-                        <p className="font-bold text-body-sm">{item.company}</p>
+                        <p className="font-bold text-sm">{item.company}</p>
                       </div>
                     </div>
                   </article>
@@ -171,13 +171,13 @@ export function TestimonialsSection() {
                     src={item.photo || "/placeholder.svg"}
                     width={120}
                     height={120}
-                    className="font-bold text-body-sm"
+                    className="font-bold"
                   />
                 </figure>
                 <div className="flex w-full flex-1 flex-col">
-                  <p className="font-bold text-body-sm">{item.name}</p>
+                  <p className="font-bold text-sm">{item.name}</p>
                   <p className="text-body-sm">{item.role}</p>
-                  <p className="font-bold text-body-sm">{item.company}</p>
+                  <p className="font-bold text-sm">{item.company}</p>
                 </div>
               </div>
             </article>
