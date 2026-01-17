@@ -27,9 +27,9 @@ function DesktopTestimonialCard() {
       >
         <p className="text-slate-500">&quot;{t("quote")}&quot;</p>
         <article className="flex w-full flex-col space-y-1">
-          <p className="text-body-sm font-bold">{t("name")}</p>
-          <p className="text-body-sm">{t("role")}</p>
-          <p className="text-body-sm font-bold">{t("company")}</p>
+          <p className="text-sm font-bold">{t("name")}</p>
+          <p className="text-sm">{t("role")}</p>
+          <p className="text-sm font-bold">{t("company")}</p>
         </article>
       </aside>
     </div>
@@ -52,13 +52,13 @@ export function HeroSection() {
         />
       </div>
 
-      <div className="relative z-10 flex w-full max-w-full bg-blue-950 px-4 pb-12 pt-14 md:max-w-[50%] md:items-center md:bg-blue-950/80 md:pr-0 lg:py-16 xl:py-20 xl:pl-16 3xl:min-h-[675px] 4xl:min-h-[695px]">
+      <div className="relative z-10 flex w-full max-w-full bg-blue-950 px-4 pb-12 pt-14 md:max-w-[50%] md:items-center lg:pr-12 md:bg-blue-950/80 lg:py-20">
         <div className="flex w-full max-w-xl flex-col items-center gap-8 md:ml-auto md:w-fit md:items-start pr-2">
           <article className="relative z-20 flex w-full flex-col items-center gap-4 md:items-start">
-            <span className="subtitle-sm text-center md:text-left lg:text-balance text-white md:subtitle-md">
+            <span className="uppercase font-light max-lg:text-sm text-center md:text-left lg:text-balance text-white">
               {t("subtitle")}
             </span>
-            <h1 className="heading-h1 text-balance text-center text-white md:text-left">
+            <h1 className="heading-h1 text-balance text-center text-white md:text-left whitespace-pre-wrap">
               {t("title")}
             </h1>
             <p className="text-body-md max-w-lg text-center font-light text-white md:text-left">

@@ -48,9 +48,7 @@ export function CountryCodeSelect({
               <div className="flex items-center gap-2">
                 {Flag && <Flag className="w-5 h-4" />}
                 <span>{item.code}</span>
-                <span className="text-muted-foreground text-xs">
-                  {item.country}
-                </span>
+                <span className="text-slate-700">{item.country}</span>
               </div>
             </SelectItem>
           );

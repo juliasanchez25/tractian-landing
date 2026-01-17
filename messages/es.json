@@ -179,7 +179,7 @@
     "button": "Agenda una demo"
   },
   "HeroTestimonial": {
-    "quote": "Con todo centralizado en la plataforma de Tractian, finalmente tenemos la visibilidad para actuar rápido, planear mejor y demostrar resultados reales.",
+    "quote": "Ya no movemos nada si no vemos qué dice Tractian. Es parte de nuestras juntas operativas y decisiones de dirección.",
     "name": "Ricardo C.",
     "role": "Gerente de Planta",
     "company": "Cyplus Idesa"
@@ -501,7 +501,7 @@
       "cnpj": "RFC: TEC221201H50",
       "phone": "+52 (800) 953-8998"
     },
-    "backToTop": "Volver arriba",
+    "backToTop": "Volver al inicio",
     "address": "Córdoba 23, Cuauhtémoc, 06700, Ciudad de México, CDMX",
     "privacy": "Tus elecciones de privacidad",
     "allRightsReserved": "Todos los derechos reservados.",
@@ -512,49 +512,36 @@
     "title": "Solicita Tu Demostración",
     "description": "Completa los campos para hablar con un especialista y entender los beneficios que nuestras soluciones ofrecen para tus operaciones de mantenimiento.",
     "fields": {
-      "namePlaceholder": "Ingresa tu nombre",
-      "workEmailPlaceholder": "Ingresa tu correo corporativo",
-      "jobTitlePlaceholder": "Selecciona tu puesto",
-      "industrySectorPlaceholder": "Selecciona tu sector",
-      "solutionPlaceholder": "Selecciona una solución"
+      "namePlaceholder": "Nombre completo",
+      "workEmailPlaceholder": "E-mail profesional",
+      "phonePlaceholder": "Número de teléfono",
+      "jobTitlePlaceholder": "Cargo",
+      "industrySectorPlaceholder": "Sector",
+      "solutionPlaceholder": "Selecciona la solución de mayor interés"
     },
     "jobTitles": [
-      "Gerente de Planta",
-      "Gerente de Mantenimiento",
-      "Gerente de Operaciones",
-      "Gerente de Instalaciones",
-      "Director de Operaciones",
-      "Otro"
+      "Analista de Innovación",
+      "Analista de Predictivo",
+      "Analista de Automatización"
     ],
-    "industrySectors": [
-      "Manufactura",
-      "Petróleo y Gas",
-      "Alimentos y Bebidas",
-      "Farmacéutica",
-      "Minería",
-      "Logística",
-      "Servicios",
-      "Otro"
-    ],
+    "industrySectors": ["Aeronáutica", "Aeropuertos", "Agricultura"],
     "solutions": [
-      "Gestión de Mantenimiento",
-      "Gestión de Activos",
-      "Gestión de Órdenes de Trabajo",
-      "Mantenimiento Predictivo",
-      "Cumplimiento y Seguridad"
+      "Sensor de Vibración",
+      "Software de Gestión",
+      "Sensor de Energía"
     ],
     "countryCodes": [
       {
         "code": "+1",
-        "country": "Estados Unidos"
+        "country": "United States"
       },
       {
         "code": "+55",
-        "country": "Brasil"
+        "country": "Brazil"
       },
       {
         "code": "+34",
-        "country": "Espanha"
+        "country": "Spain"
       }
     ],
     "submitButton": "Solicitar demostración",

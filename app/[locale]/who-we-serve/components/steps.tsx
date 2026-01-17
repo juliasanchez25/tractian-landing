@@ -8,7 +8,7 @@ export function StepsSection() {
     <section className="bg-slate-100 px-4 py-12 lg:py-16">
       <div className="mx-auto flex w-full max-w-2xl flex-col items-start gap-8 lg:max-w-6xl lg:items-center lg:gap-12">
         <span className="section-label">{t("subtitle")}</span>
-        <h2 className="heading-h2 text-left text-slate-700 lg:mb-4 lg:text-center">
+        <h2 className="heading-h2 lg:whitespace-break-spaces text-left text-slate-700 lg:mb-4 lg:text-center">
           {t("title")}
         </h2>
         <ol className="flex w-full flex-col gap-8 lg:flex-row lg:justify-between lg:gap-12 xl:gap-16">
@@ -21,7 +21,9 @@ export function StepsSection() {
                 {index + 1}
               </span>
               <article className="flex w-full flex-col gap-1 lg:gap-4">
-                <h3 className="heading-h3 text-slate-700">{item.title}</h3>
+                <h3 className="text-xl tracking-tight font-bold text-slate-700">
+                  {item.title}
+                </h3>
                 <p className="text-body-md text-slate-500">
                   {item.description}
                 </p>

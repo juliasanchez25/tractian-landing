@@ -10,7 +10,9 @@ export function WhyChooseSection() {
       <div className="mx-auto flex w-full max-w-2xl flex-col gap-8 lg:max-w-6xl lg:gap-16">
         <article className="flex w-full flex-col gap-4">
           <p className="section-label">{t("subtitle")}</p>
-          <h2 className="heading-h2 text-slate-700">{t("title")}</h2>
+          <h2 className="text-2xl lg:text-4xl font-bold tracking-tight text-slate-700">
+            {t("title")}
+          </h2>
         </article>
 
         <WhyChooseTabs items={items} />

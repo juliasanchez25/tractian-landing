@@ -75,8 +75,13 @@ export function RequestDemoModal({
     formState: { errors },
     reset,
     setValue,
+    trigger,
   } = useForm<RequestDemoFormData>({
     resolver: zodResolver(requestDemoSchema),
+    mode: "onChange",
+    defaultValues: {
+      phoneCode: "+55",
+    },
   });
 
   const [selectedPhoneCode, setSelectedPhoneCode] = React.useState("+55");
@@ -93,25 +98,29 @@ export function RequestDemoModal({
   const handlePhoneCodeChange = (value: string) => {
     setSelectedPhoneCode(value);
     setValue("phoneCode", value);
+    trigger("phoneCode");
   };
 
   const handleJobTitleChange = (value: string) => {
     setSelectedJobTitle(value);
     setValue("jobTitle", value);
+    trigger("jobTitle");
   };
 
   const handleIndustrySectorChange = (value: string) => {
     setSelectedIndustrySector(value);
     setValue("industrySector", value);
+    trigger("industrySector");
   };
 
   const handleSolutionChange = (value: string) => {
     setSelectedSolution(value);
     setValue("solution", value);
+    trigger("solution");
   };
 
   const onSubmit = (data: RequestDemoFormData) => {
-    console.log("Form Data:", data);
+    alert("Form data submitted: " + JSON.stringify(data, null, 2));
     reset();
     setSelectedPhoneCode("+55");
     setSelectedJobTitle("");
@@ -176,6 +185,14 @@ export function RequestDemoModal({
                   {...register("phoneNumber")}
                   className="border-0 shadow-none focus-visible:ring-0 focus-visible:ring-offset-0"
                   data-slot="input-group-control"
+                  placeholder={t("RequestDemoModal.fields.phonePlaceholder")}
+                  inputMode="numeric"
+                  onInput={(e) => {
+                    e.currentTarget.value = e.currentTarget.value.replace(
+                      /[^0-9]/g,
+                      "",
+                    );
+                  }}
                 />
               </InputGroup>
               {(errors.phoneNumber || errors.phoneCode) && (

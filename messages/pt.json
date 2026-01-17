@@ -515,34 +515,21 @@
     "fields": {
       "namePlaceholder": "Nome completo",
       "workEmailPlaceholder": "E-mail profissional",
+      "phonePlaceholder": "Número de telefone",
       "jobTitlePlaceholder": "Cargo",
       "industrySectorPlaceholder": "Setor da indústria",
       "solutionPlaceholder": "Selecione a solução de maior interesse"
     },
     "jobTitles": [
-      "Gerente de Planta",
-      "Gerente de Manutenção",
-      "Gerente de Operações",
-      "Gerente de Instalações",
-      "Diretor de Operações",
-      "Outro"
+      "Analista de Inovação",
+      "Analista de Preditiva",
+      "Analista de Automação"
     ],
-    "industrySectors": [
-      "Manufatura",
-      "Óleo e Gás",
-      "Alimentos e Bebidas",
-      "Farmacêutica",
-      "Mineração",
-      "Logística",
-      "Utilities",
-      "Outro"
-    ],
+    "industrySectors": ["Aeronáutica", "Aeroportos", "Atacadista"],
     "solutions": [
-      "Gestão de Manutenção",
+      "Monitoramento de Condição",
       "Gestão de Ativos",
-      "Gestão de Ordens de Serviço",
-      "Manutenção Preditiva",
-      "Conformidade e Segurança"
+      "Gestão de Energia"
     ],
     "countryCodes": [
       {

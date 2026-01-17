@@ -19,8 +19,8 @@ export function FaqSection() {
     <section className="relative w-full bg-slate-100 py-12 lg:py-16">
       <div className="mx-auto flex max-w-2xl flex-col items-center gap-8 px-4 lg:max-w-6xl lg:gap-16">
         <article className="flex w-full flex-col items-center gap-2 lg:gap-4">
-          <p className="subtitle-md text-center text-primary">FAQ</p>
-          <h2 className="heading-h2 text-center text-slate-700">
+          <p className="section-label">FAQ</p>
+          <h2 className="text-2xl lg:text-4xl font-bold tracking-tight text-center text-slate-700">
             {t("title")}
           </h2>
         </article>

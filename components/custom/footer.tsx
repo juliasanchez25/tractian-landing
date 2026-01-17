@@ -207,7 +207,7 @@ export function Footer() {
           </div>
         </section>
 
-        <section className="border-t border-slate-800 pt-8">
+        <section className="pt-8">
           <div className="flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-center">
             <div className="flex flex-col gap-4">
               <FooterLogo />
@@ -314,25 +314,51 @@ export function Footer() {
               </p>
 
               <button className="flex items-center gap-2 text-white text-sm hover:text-white transition">
-                <svg className="h-5 w-5" viewBox="0 0 30 14" fill="none">
-                  <rect
-                    x="0.5"
-                    y="0.5"
-                    width="29"
-                    height="13"
-                    rx="6.5"
-                    fill="#1D6BFF"
-                    stroke="#1D6BFF"
-                  />
-                  <path
-                    d="M7 1C3.68629 1 1 3.68629 1 7C1 10.3137 3.68629 13 7 13C10.3137 13 13 10.3137 13 7C13 3.68629 10.3137 1 7 1Z"
-                    fill="white"
-                  />
-                  <path d="M22 4H17V10H22V4Z" fill="white" />
-                  <path
-                    d="M25 4H23V10H25C26.6569 10 28 8.65685 28 7C28 5.34315 26.6569 4 25 4Z"
-                    fill="white"
-                  />
+                <svg
+                  className="flex w-6"
+                  fill="none"
+                  height="24"
+                  viewBox="0 0 48 24"
+                  width="48"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clipPath="url(#clip0_6373_1758)">
+                    <rect
+                      height="22.4"
+                      rx="11.2"
+                      stroke="#fff"
+                      strokeWidth="1.6"
+                      width="46.4"
+                      x="0.8"
+                      y="0.8"
+                    ></rect>
+                    <path
+                      d="M22.0667 23.2L28.6 0.8H36C42.1856 0.8 47.2 5.81441 47.2 12C47.2 18.1856 42.1856 23.2 36 23.2H22.0667Z"
+                      fill="#fff"
+                      stroke="#fff"
+                      strokeWidth="1.6"
+                    ></path>
+                    <path
+                      d="M7.12019 11.4853L11.3628 15.7279L19.8481 7.24264"
+                      stroke="#fff"
+                      strokeWidth="1.6"
+                    ></path>
+                    <path
+                      d="M39.228 16.2426L30.7427 7.75732"
+                      stroke="#172554"
+                      strokeWidth="1.6"
+                    ></path>
+                    <path
+                      d="M39.228 7.75739L30.7427 16.2427"
+                      stroke="#172554"
+                      strokeWidth="1.6"
+                    ></path>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_6373_1758">
+                      <rect fill="#fff" height="24" width="48"></rect>
+                    </clipPath>
+                  </defs>
                 </svg>
                 <span>{t("privacy")}</span>
               </button>
@@ -347,7 +373,9 @@ export function Footer() {
 export function FooterOptionsList({ section }: FooterOptionsListProps) {
   return (
     <div>
-      <h4 className="subtitle-md mb-4 text-white">{section.title}</h4>
+      <h4 className="uppercase font-semibold mb-4 text-white">
+        {section.title}
+      </h4>
       <div className="flex flex-col gap-2">
         {section.items.map((item, index) => (
           <Link

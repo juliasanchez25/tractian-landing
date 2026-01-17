@@ -187,9 +187,9 @@
   },
   "HeroTestimonial": {
     "quote": "With everything centralized within Tractian platform, we finally have the visibility to act fast, plan smarter, and show real results.",
-    "name": "Jari S.",
-    "role": "Industrial Director",
-    "company": "UISA"
+    "name": "Paul Morais",
+    "role": "Plant Manager",
+    "company": "The Fillo Factory"
   },
   "WhyChoose": {
     "subtitle": "Why Plant Managers Choose Tractian",
@@ -523,49 +523,28 @@
     "title": "Request Your Demo",
     "description": "Fill in the fields to talk to a specialist and understand the benefits that our solutions offer for your maintenance operations.",
     "fields": {
-      "namePlaceholder": "Enter your name",
-      "workEmailPlaceholder": "Enter your work email",
-      "jobTitlePlaceholder": "Select your job title",
-      "industrySectorPlaceholder": "Select your industry",
-      "solutionPlaceholder": "Select a solution"
+      "namePlaceholder": "Name",
+      "workEmailPlaceholder": "Work email",
+      "phonePlaceholder": "Phone number",
+      "jobTitlePlaceholder": "Job title",
+      "industrySectorPlaceholder": "Industry sector",
+      "solutionPlaceholder": "Select the solution of most interest"
     },
-    "jobTitles": [
-      "Plant Manager",
-      "Maintenance Manager",
-      "Operations Manager",
-      "Facility Manager",
-      "Director of Operations",
-      "Other"
-    ],
-    "industrySectors": [
-      "Manufacturing",
-      "Oil & Gas",
-      "Food & Beverage",
-      "Pharmaceuticals",
-      "Mining",
-      "Logistics",
-      "Utilities",
-      "Other"
-    ],
-    "solutions": [
-      "Maintenance Management",
-      "Asset Management",
-      "Work Order Management",
-      "Predictive Maintenance",
-      "Compliance & Safety"
-    ],
+    "jobTitles": ["Assistant", "Automation Analyst", "Automation Director"],
+    "industrySectors": ["Aeronautics", "Agriculture", "Animal Nutrition"],
+    "solutions": ["Condition Monitoring", "CMMS Software", "OEE Solutions"],
     "countryCodes": [
       {
         "code": "+1",
-        "country": "Estados Unidos"
+        "country": "United States"
       },
       {
         "code": "+55",
-        "country": "Brasil"
+        "country": "Brazil"
       },
       {
         "code": "+34",
-        "country": "Espanha"
+        "country": "Spain"
       }
     ],
     "submitButton": "Request demo",
