@@ -4,6 +4,25 @@ import createNextIntlPlugin from "next-intl/plugin";
 const withNextIntl = createNextIntlPlugin();
 
 const nextConfig: NextConfig = {
+  async redirects() {
+    return [
+      {
+        source: "/en",
+        destination: "/en/who-we-serve",
+        permanent: true,
+      },
+      {
+        source: "/es",
+        destination: "/es/who-we-serve",
+        permanent: true,
+      },
+      {
+        source: "/",
+        destination: "/pt/who-we-serve",
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {
