@@ -320,7 +320,7 @@ function NavbarActiveMenu({ activeMenu, setActiveMenu }: NavbarCommonProps) {
                           strokeWidth={1}
                         />
                       </div>
-                      <h3 className="heading-h3 text-slate-700 transition-all duration-150 hover:text-primary group-hover:text-primary">
+                      <h3 className="font-semibold text-lg text-slate-700 transition-all duration-150 hover:text-primary group-hover:text-primary">
                         {category.title}
                       </h3>
                       <ArrowRight className="size-5 text-primary group-hover/title:text-primary opacity-0 group-hover/title:opacity-100 transition-all" />
