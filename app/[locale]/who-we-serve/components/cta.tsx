@@ -1,7 +1,11 @@
+"use client";
+
+import * as React from "react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { getS3Url } from "@/lib/config";
 import { Button } from "@/components/ui/button";
+import { RequestDemoModal } from "@/components/custom/request-demo-modal";
 
 const CTA_BG_IMAGE = getS3Url(
   "/website/pages/who-we-serve/maintenance-engineer/en/more-than-machines.png",
@@ -9,6 +13,7 @@ const CTA_BG_IMAGE = getS3Url(
 
 export function CtaSection() {
   const t = useTranslations("CTA");
+  const [isRequestDemoOpen, setIsRequestDemoOpen] = React.useState(false);
 
   return (
     <section className="relative w-full">
@@ -29,11 +34,19 @@ export function CtaSection() {
               {t("title")}
             </h2>
           </article>
-          <Button className="rounded-xs" type="button">
+          <Button
+            className="rounded-xs"
+            type="button"
+            onClick={() => setIsRequestDemoOpen(true)}
+          >
             {t("button")}
           </Button>
         </div>
       </div>
+      <RequestDemoModal
+        open={isRequestDemoOpen}
+        onOpenChange={setIsRequestDemoOpen}
+      />
     </section>
   );
 }
