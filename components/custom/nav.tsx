@@ -320,7 +320,7 @@ function NavbarActiveMenu({ activeMenu, setActiveMenu }: NavbarCommonProps) {
                           strokeWidth={1}
                         />
                       </div>
-                      <h3 className="text-slate-500 transition-all duration-150 hover:text-primary group-hover:text-primary lg:font-semibold lg:text-slate-700 text-lg">
+                      <h3 className="heading-h3 text-slate-700 transition-all duration-150 hover:text-primary group-hover:text-primary">
                         {category.title}
                       </h3>
                       <ArrowRight className="size-5 text-primary group-hover/title:text-primary opacity-0 group-hover/title:opacity-100 transition-all" />
@@ -328,7 +328,7 @@ function NavbarActiveMenu({ activeMenu, setActiveMenu }: NavbarCommonProps) {
 
                     <div className="flex w-full flex-col gap-4 mt-2">
                       {category.items.map((item, itemIndex) => {
-                        const Icon = solutionIcons[index]?.[itemIndex];
+                        const Icon = solutionIcons[index]?.[itemIndex] || Cog;
                         return (
                           <NavbarActiveMenuItem
                             key={itemIndex}
@@ -348,13 +348,13 @@ function NavbarActiveMenu({ activeMenu, setActiveMenu }: NavbarCommonProps) {
               <div className="animate-in fade-in duration-300 flex w-full gap-2 lg:justify-between">
                 <div className="flex flex-col gap-4 border-l border-slate-300 pl-4 w-80">
                   <div className="group/title flex items-center gap-2 cursor-pointer">
-                    <h3 className="text-slate-500 text-sm">
+                    <h3 className="text-body-sm text-slate-500">
                       {whoWeServe[0].title}
                     </h3>
                   </div>
                   <div className="flex w-full flex-col gap-4 mt-2">
                     {whoWeServe[0].items.map((item, index) => {
-                      const Icon = whoWeServeIcons[0][index];
+                      const Icon = whoWeServeIcons[0][index] || User;
                       return (
                         <NavbarActiveMenuItem
                           key={index}
@@ -369,13 +369,13 @@ function NavbarActiveMenu({ activeMenu, setActiveMenu }: NavbarCommonProps) {
 
                 <div className="flex flex-col gap-4 border-l border-slate-300 pl-4 flex-1">
                   <div className="group/title flex items-center gap-2 cursor-pointer">
-                    <h3 className="text-slate-500 text-sm">
+                    <h3 className="text-body-sm text-slate-500">
                       {whoWeServe[1].title}
                     </h3>
                   </div>
                   <div className="grid grid-cols-3 gap-y-4 gap-x-8 mt-2">
                     {whoWeServe[1].items.map((item, index) => {
-                      const Icon = whoWeServeIcons[1][index];
+                      const Icon = whoWeServeIcons[1][index] || Building2;
                       return (
                         <NavbarActiveMenuItem
                           key={index}
@@ -393,7 +393,7 @@ function NavbarActiveMenu({ activeMenu, setActiveMenu }: NavbarCommonProps) {
             {activeMenu === NavbarMenu.Resources && (
               <div className="animate-in fade-in duration-300 flex w-full gap-4 lg:justify-between">
                 <div className="flex flex-col gap-6 border-l border-slate-300 pl-4 w-full">
-                  <h3 className="text-slate-500 text-sm">
+                  <h3 className="text-body-sm text-slate-500">
                     {resources[0].title}
                   </h3>
                   <div className="w-full gap-4 grid grid-cols-3">
@@ -412,7 +412,7 @@ function NavbarActiveMenu({ activeMenu, setActiveMenu }: NavbarCommonProps) {
                 </div>
 
                 <div className="flex flex-col gap-6 border-l border-slate-300 pl-4 w-full max-w-[30%]">
-                  <h3 className="text-slate-500 text-sm">
+                  <h3 className="text-body-sm text-slate-500">
                     {resources[1].title}
                   </h3>
                   <div className="w-full gap-4 flex flex-col">
@@ -435,7 +435,7 @@ function NavbarActiveMenu({ activeMenu, setActiveMenu }: NavbarCommonProps) {
             {activeMenu === NavbarMenu.Company && (
               <div className="animate-in fade-in duration-300 flex w-full gap-8 lg:justify-between">
                 <div className="flex flex-col gap-6 border-l border-slate-300 pl-4 w-full">
-                  <h3 className="text-slate-500 text-sm lg:text-base">
+                  <h3 className="text-body-sm text-slate-500 lg:text-body-md">
                     {company[0].title}
                   </h3>
                   <div className="grid grid-cols-3 gap-2">
@@ -465,7 +465,7 @@ function NavbarActiveMenu({ activeMenu, setActiveMenu }: NavbarCommonProps) {
                 </div>
 
                 <div className="flex flex-col gap-6 border-l border-slate-300 pl-4 w-[40%]">
-                  <h3 className="text-slate-500 text-sm lg:text-base">
+                  <h3 className="text-body-sm text-slate-500 lg:text-body-md">
                     {company[1].title}
                   </h3>
                   <div className="flex w-full flex-col gap-4">
@@ -488,7 +488,7 @@ function NavbarActiveMenu({ activeMenu, setActiveMenu }: NavbarCommonProps) {
             {activeMenu === NavbarMenu.Pricing && (
               <div className="animate-in fade-in duration-300 flex w-full gap-4 lg:justify-between">
                 {pricing.map((item, index) => {
-                  const Icon = pricingIcons[index];
+                  const Icon = pricingIcons[index] || Activity;
                   return (
                     <div
                       key={index}

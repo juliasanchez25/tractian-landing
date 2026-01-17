@@ -126,24 +126,24 @@ export function HowItWorksTabs({ items }: HowItWorksTabsProps) {
         </nav>
 
         <div
-          className="flex w-full flex-col items-center justify-between gap-8 md:flex-row lg:gap-12"
+          className="flex w-full flex-col items-center justify-between gap-8 lg:flex-row lg:gap-12"
           role="tabpanel"
           id={`tabpanel-${activeTab}`}
           aria-labelledby={`tab-${activeTab}`}
           key={activeTab}
         >
           <div className="flex w-full flex-col gap-4 lg:max-w-95.5 animate-in fade-in slide-in-from-bottom-4 duration-500">
-            <h3 className="font-bold tracking-tight text-xl">
+            <h3 className="heading-h3 text-slate-700">
               {items[activeTab - 1]?.contentTitle}
             </h3>
             {items[activeTab - 1]?.description && (
-              <p className="text-slate-500">
+              <p className="text-body-md text-slate-500">
                 {items[activeTab - 1]?.description}
               </p>
             )}
             <ul className="ml-4 flex w-full list-disc flex-col gap-1">
               {items[activeTab - 1]?.listItem.map((text, i) => (
-                <li key={i} className="text-slate-500 text-base">
+                <li key={i} className="text-body-md text-slate-500">
                   {text}
                 </li>
               ))}

@@ -149,22 +149,100 @@ body {
   font-family: var(--font-inter);
 }
 
+/* Typography System - Body Text */
 .text-body-sm {
   font-size: 14px;
-  font-weight: regular;
+  font-weight: 400;
   line-height: 22px;
 }
 
 .text-body-md {
   font-size: 16px;
-  font-weight: regular;
+  font-weight: 400;
   line-height: 24px;
 }
 
 .text-body-lg {
   font-size: 18px;
-  font-weight: regular;
+  font-weight: 400;
   line-height: 28px;
+}
+
+.heading-h1 {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+@media (min-width: 768px) {
+  .heading-h1 {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .heading-h1 {
+    font-size: 40px;
+  }
+}
+
+.heading-h2 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+}
+
+@media (min-width: 768px) {
+  .heading-h2 {
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .heading-h2 {
+    font-size: 32px;
+  }
+}
+
+.heading-h3 {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+@media (min-width: 1024px) {
+  .heading-h3 {
+    font-size: 20px;
+  }
+}
+
+/* Typography System - Subtitles */
+.subtitle-sm {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.subtitle-md {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Typography System - Section Label */
+.section-label {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-primary);
 }
 
 /* Custom animations */

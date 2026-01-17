@@ -512,18 +512,10 @@
     "title": "Solicita Tu Demostración",
     "description": "Completa los campos para hablar con un especialista y entender los beneficios que nuestras soluciones ofrecen para tus operaciones de mantenimiento.",
     "fields": {
-      "name": "Nombre",
       "namePlaceholder": "Ingresa tu nombre",
-      "workEmail": "Correo Corporativo",
       "workEmailPlaceholder": "Ingresa tu correo corporativo",
-      "phoneNumber": "Número de Teléfono",
-      "phoneCodePlaceholder": "Código",
-      "phoneNumberPlaceholder": "Número de teléfono",
-      "jobTitle": "Puesto",
       "jobTitlePlaceholder": "Selecciona tu puesto",
-      "industrySector": "Sector Industrial",
       "industrySectorPlaceholder": "Selecciona tu sector",
-      "solution": "Selecciona la solución de mayor interés",
       "solutionPlaceholder": "Selecciona una solución"
     },
     "jobTitles": [
@@ -562,35 +554,7 @@
       },
       {
         "code": "+34",
-        "country": "España"
-      },
-      {
-        "code": "+44",
-        "country": "Reino Unido"
-      },
-      {
-        "code": "+33",
-        "country": "Francia"
-      },
-      {
-        "code": "+49",
-        "country": "Alemania"
-      },
-      {
-        "code": "+39",
-        "country": "Italia"
-      },
-      {
-        "code": "+81",
-        "country": "Japón"
-      },
-      {
-        "code": "+86",
-        "country": "China"
-      },
-      {
-        "code": "+91",
-        "country": "India"
+        "country": "Espanha"
       }
     ],
     "submitButton": "Solicitar demostración",
@@ -602,10 +566,7 @@
       "jobTitleRequired": "El puesto es obligatorio",
       "industrySectorRequired": "El sector industrial es obligatorio",
       "solutionRequired": "La solución es obligatoria",
-      "countryCodeRequired": "Por favor, selecciona un código de país",
-      "jobTitleRequiredSelect": "Por favor, selecciona un puesto",
-      "industrySectorRequiredSelect": "Por favor, selecciona un sector industrial",
-      "solutionRequiredSelect": "Por favor, selecciona una solución"
+      "countryCodeRequired": "Por favor, selecciona un código de país"
     },
     "successMessage": "Datos del Formulario:\n\nNombre: {name}\nCorreo: {email}\nTeléfono: {phone} {phoneNumber}\nPuesto: {jobTitle}\nSector Industrial: {industrySector}\nSolución: {solution}"
   }

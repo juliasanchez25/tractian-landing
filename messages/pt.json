@@ -510,22 +510,14 @@
     "termsOfService": "Termos de Serviço"
   },
   "RequestDemoModal": {
-    "title": "Solicite Sua Demonstração",
-    "description": "Preencha os campos para conversar com um especialista e entender os benefícios que nossas soluções oferecem para suas operações de manutenção.",
+    "title": "Solicite sua demonstração",
+    "description": "Preencha os campos para falar com um especialista e entender os benefícios que a Tractian oferece para suas operações de manutenção.",
     "fields": {
-      "name": "Nome",
-      "namePlaceholder": "Digite seu nome",
-      "workEmail": "Email Corporativo",
-      "workEmailPlaceholder": "Digite seu email corporativo",
-      "phoneNumber": "Número de Telefone",
-      "phoneCodePlaceholder": "Código",
-      "phoneNumberPlaceholder": "Número de telefone",
-      "jobTitle": "Cargo",
-      "jobTitlePlaceholder": "Selecione seu cargo",
-      "industrySector": "Setor Industrial",
-      "industrySectorPlaceholder": "Selecione seu setor",
-      "solution": "Selecione a solução de maior interesse",
-      "solutionPlaceholder": "Selecione uma solução"
+      "namePlaceholder": "Nome completo",
+      "workEmailPlaceholder": "E-mail profissional",
+      "jobTitlePlaceholder": "Cargo",
+      "industrySectorPlaceholder": "Setor da indústria",
+      "solutionPlaceholder": "Selecione a solução de maior interesse"
     },
     "jobTitles": [
       "Gerente de Planta",
@@ -564,34 +556,6 @@
       {
         "code": "+34",
         "country": "Espanha"
-      },
-      {
-        "code": "+44",
-        "country": "Reino Unido"
-      },
-      {
-        "code": "+33",
-        "country": "França"
-      },
-      {
-        "code": "+49",
-        "country": "Alemanha"
-      },
-      {
-        "code": "+39",
-        "country": "Itália"
-      },
-      {
-        "code": "+81",
-        "country": "Japão"
-      },
-      {
-        "code": "+86",
-        "country": "China"
-      },
-      {
-        "code": "+91",
-        "country": "Índia"
       }
     ],
     "submitButton": "Solicitar demonstração",
@@ -603,10 +567,7 @@
       "jobTitleRequired": "Cargo é obrigatório",
       "industrySectorRequired": "Setor industrial é obrigatório",
       "solutionRequired": "Solução é obrigatória",
-      "countryCodeRequired": "Por favor, selecione um código de país",
-      "jobTitleRequiredSelect": "Por favor, selecione um cargo",
-      "industrySectorRequiredSelect": "Por favor, selecione um setor industrial",
-      "solutionRequiredSelect": "Por favor, selecione uma solução"
+      "countryCodeRequired": "Por favor, selecione um código de país"
     },
     "successMessage": "Dados do Formulário:\n\nNome: {name}\nEmail: {email}\nTelefone: {phone} {phoneNumber}\nCargo: {jobTitle}\nSetor Industrial: {industrySector}\nSolução: {solution}"
   }

@@ -86,7 +86,7 @@ export function TestimonialsSection() {
   return (
     <section className="w-full bg-white px-4 py-12 lg:py-16 xl:px-0">
       <div className="mx-auto flex w-full max-w-2xl flex-col items-center gap-8 md:gap-12 lg:max-w-6xl">
-        <h2 className="px-4 text-left font-bold text-2xl sm:px-0 lg:text-center lg:text-3xl">
+        <h2 className="heading-h2 px-4 text-left text-slate-700 sm:px-0 lg:text-center">
           {t("title")}
         </h2>
 
@@ -110,7 +110,7 @@ export function TestimonialsSection() {
               {items.map((item) => (
                 <div
                   key={`${item.name}-${item.company}`}
-                  className="w-full flex-shrink-0 px-4"
+                  className="w-full shrink-0 px-4"
                 >
                   <article className="flex flex-col gap-4">
                     <div className="flex w-full items-center gap-4">

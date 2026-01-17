@@ -9,12 +9,8 @@ export function WhyChooseSection() {
     <section className="w-full bg-slate-100 px-4 py-12 lg:py-16">
       <div className="mx-auto flex w-full max-w-2xl flex-col gap-8 lg:max-w-6xl lg:gap-16">
         <article className="flex w-full flex-col gap-4">
-          <p className="uppercase tracking-wide text-primary">
-            {t("subtitle")}
-          </p>
-          <h2 className="font-bold tracking-tight text-slate-700 text-3xl md:text-[40px]">
-            {t("title")}
-          </h2>
+          <p className="section-label">{t("subtitle")}</p>
+          <h2 className="heading-h2 text-slate-700">{t("title")}</h2>
         </article>
 
         <WhyChooseTabs items={items} />

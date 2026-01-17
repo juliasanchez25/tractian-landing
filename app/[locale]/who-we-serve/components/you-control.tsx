@@ -17,7 +17,7 @@ export function YouControlSection() {
   return (
     <section className="w-full bg-slate-100 px-4 py-12 lg:py-16">
       <div className="mx-auto flex w-full max-w-2xl flex-col items-center gap-8 lg:max-w-6xl lg:gap-12">
-        <h2 className="whitespace-pre-wrap font-bold tracking-tight text-slate-700 text-2xl lg:text-center lg:text-[32px]">
+        <h2 className="heading-h2 md:whitespace-pre-wrap text-slate-700 lg:text-center">
           {t("title")}
         </h2>
         <div className="flex h-auto w-full flex-col items-stretch gap-8 lg:flex-row lg:justify-between lg:gap-16">
@@ -30,10 +30,10 @@ export function YouControlSection() {
                 {icons[index]}
               </figure>
               <div className="flex w-full flex-col gap-1 sm:gap-1 lg:items-center lg:gap-4">
-                <h3 className="text-left font-bold text-slate-700 text-lg lg:text-center lg:text-xl">
+                <h3 className="heading-h3 text-left text-slate-700 lg:text-center">
                   {item.title}
                 </h3>
-                <p className="text-left text-slate-500 text-base lg:text-center">
+                <p className="text-body-md text-left text-slate-500 lg:text-center">
                   {item.description}
                 </p>
               </div>

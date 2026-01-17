@@ -27,9 +27,9 @@ function DesktopTestimonialCard() {
       >
         <p className="text-slate-500">&quot;{t("quote")}&quot;</p>
         <article className="flex w-full flex-col space-y-1">
-          <p className="font-bold text-sm">{t("name")}</p>
-          <p className="text-sm">{t("role")}</p>
-          <p className="font-bold text-sm">{t("company")}</p>
+          <p className="text-body-sm font-bold">{t("name")}</p>
+          <p className="text-body-sm">{t("role")}</p>
+          <p className="text-body-sm font-bold">{t("company")}</p>
         </article>
       </aside>
     </div>
@@ -55,13 +55,13 @@ export function HeroSection() {
       <div className="relative z-10 flex w-full max-w-full bg-blue-950 px-4 pb-12 pt-14 md:max-w-[50%] md:items-center md:bg-blue-950/80 md:pr-0 lg:py-16 xl:py-20 xl:pl-16 3xl:min-h-[675px] 4xl:min-h-[695px]">
         <div className="flex w-full max-w-xl flex-col items-center gap-8 md:ml-auto md:w-fit md:items-start pr-2">
           <article className="relative z-20 flex w-full flex-col items-center gap-4 md:items-start">
-            <span className="text-balance text-center font-light uppercase tracking-wider text-white text-xs md:text-base">
+            <span className="subtitle-sm text-center md:text-left lg:text-balance text-white md:subtitle-md">
               {t("subtitle")}
             </span>
-            <h1 className="text-balance text-center font-bold text-white text-[28px] leading-tight tracking-tight md:text-left md:text-4xl lg:text-[40px]">
+            <h1 className="heading-h1 text-balance text-center text-white md:text-left">
               {t("title")}
             </h1>
-            <p className="max-w-lg text-center font-light text-white text-sm md:text-left md:text-base">
+            <p className="text-body-md max-w-lg text-center font-light text-white md:text-left">
               {t("description")}
             </p>
           </article>

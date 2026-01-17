@@ -105,7 +105,7 @@ export function WhyChooseTabs({ items }: WhyChooseTabsProps) {
                 <Check className="h-4 w-4 text-white" />
               </figure>
               <h3
-                className={`w-full flex-1 text-left font-medium tracking-tight transition-all duration-500 group-hover:brightness-110 text-lg lg:font-semibold lg:text-xl ${
+                className={`heading-h3 w-full flex-1 text-left tracking-tight transition-all duration-500 group-hover:brightness-110 ${
                   activeFeature === index ? "text-slate-700" : "text-slate-400"
                 }`}
               >

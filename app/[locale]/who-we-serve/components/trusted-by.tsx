@@ -42,13 +42,13 @@ export function TrustedBySection() {
         {t("TrustedBy")}
       </p>
 
-      <div className="hidden w-fit grid-cols-7 justify-items-center gap-12 md:grid">
+      <div className="hidden w-fit grid-cols-7 justify-items-center gap-12 lg:grid">
         {logoComponents.map(({ id, component: LogoComponent }) => (
           <LogoComponent key={id} />
         ))}
       </div>
 
-      <div className="relative w-full overflow-hidden md:hidden">
+      <div className="relative w-full overflow-hidden lg:hidden">
         <div className="flex animate-scroll gap-12">
           {logoComponents.map(({ id, component: LogoComponent }) => (
             <LogoComponent key={`${id}-1`} />

@@ -355,15 +355,13 @@ export function Footer() {
 export function FooterOptionsList({ section }: FooterOptionsListProps) {
   return (
     <div>
-      <h4 className="mb-4 font-semibold text-white text-sm uppercase tracking-wider">
-        {section.title}
-      </h4>
+      <h4 className="subtitle-md mb-4 text-white">{section.title}</h4>
       <div className="flex flex-col gap-2">
         {section.items.map((item, index) => (
           <Link
             key={index}
             href="#"
-            className="text-white text-sm transition hover:text-white"
+            className="text-body-sm text-white transition hover:text-white"
           >
             {item.label}
           </Link>

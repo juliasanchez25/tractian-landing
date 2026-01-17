@@ -7,7 +7,6 @@ import * as z from "zod";
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 import {
   Select,
   SelectContent,
@@ -22,6 +21,8 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
+import { InputGroup, InputGroupAddon } from "@/components/ui/input-group";
+import { CountryCodeSelect } from "@/components/custom/country-code-select";
 
 const createRequestDemoSchema = (t: ReturnType<typeof useTranslations>) =>
   z.object({
@@ -38,13 +39,19 @@ const createRequestDemoSchema = (t: ReturnType<typeof useTranslations>) =>
       .string()
       .min(1, t("RequestDemoModal.validationErrors.phoneNumberRequired")),
     jobTitle: z
-      .string()
+      .string({
+        error: t("RequestDemoModal.validationErrors.jobTitleRequired"),
+      })
       .min(1, t("RequestDemoModal.validationErrors.jobTitleRequired")),
     industrySector: z
-      .string()
+      .string({
+        error: t("RequestDemoModal.validationErrors.industrySectorRequired"),
+      })
       .min(1, t("RequestDemoModal.validationErrors.industrySectorRequired")),
     solution: z
-      .string()
+      .string({
+        error: t("RequestDemoModal.validationErrors.solutionRequired"),
+      })
       .min(1, t("RequestDemoModal.validationErrors.solutionRequired")),
   });
 
@@ -72,7 +79,7 @@ export function RequestDemoModal({
     resolver: zodResolver(requestDemoSchema),
   });
 
-  const [selectedPhoneCode, setSelectedPhoneCode] = React.useState("");
+  const [selectedPhoneCode, setSelectedPhoneCode] = React.useState("+55");
   const [selectedJobTitle, setSelectedJobTitle] = React.useState("");
   const [selectedIndustrySector, setSelectedIndustrySector] =
     React.useState("");
@@ -104,11 +111,9 @@ export function RequestDemoModal({
   };
 
   const onSubmit = (data: RequestDemoFormData) => {
-    // Form submission logic - you can add API call here
-    // For now, just close the modal and reset
     console.log("Form Data:", data);
     reset();
-    setSelectedPhoneCode("");
+    setSelectedPhoneCode("+55");
     setSelectedJobTitle("");
     setSelectedIndustrySector("");
     setSelectedSolution("");
@@ -117,103 +122,75 @@ export function RequestDemoModal({
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="sm:max-w-2xl gap-4 max-h-screen overflow-y-auto">
-        <DialogHeader className="gap-2 sticky top-0 bg-white">
-          <DialogTitle className="text-2xl">
+      <DialogContent className="sm:max-w-2xl gap-4 max-h-screen overflow-y-auto bg-slate-50  px-6 py-8 md:px-16 lg:py-12 rounded-xs">
+        <DialogHeader>
+          <DialogTitle className="text-center md:text-2xl lg:text-3xl">
             {t("RequestDemoModal.title")}
           </DialogTitle>
-          <DialogDescription className="text-sm">
+          <DialogDescription className="text-sm lg:text-base text-center text-slate-500">
             {t("RequestDemoModal.description")}
           </DialogDescription>
         </DialogHeader>
 
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-3">
-          {/* Name Field */}
           <div className="space-y-1">
-            <Label htmlFor="name" className="text-sm font-medium">
-              {t("RequestDemoModal.fields.name")}
-            </Label>
             <Input
               id="name"
               placeholder={t("RequestDemoModal.fields.namePlaceholder")}
               {...register("name")}
-              className="h-9 w-full"
             />
             {errors.name && (
-              <p className="text-red-500 text-sm">{errors.name.message}</p>
+              <p className="text-destructive text-sm">{errors.name.message}</p>
             )}
           </div>
 
-          {/* Work Email Field */}
           <div className="space-y-1">
-            <Label htmlFor="workEmail" className="text-sm font-medium">
-              {t("RequestDemoModal.fields.workEmail")}
-            </Label>
             <Input
               id="workEmail"
               type="email"
               placeholder={t("RequestDemoModal.fields.workEmailPlaceholder")}
               {...register("workEmail")}
-              className="h-9 w-full"
+              className="w-full"
             />
             {errors.workEmail && (
-              <p className="text-red-500 text-sm">{errors.workEmail.message}</p>
+              <p className="text-destructive text-sm">
+                {errors.workEmail.message}
+              </p>
             )}
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            {/* Phone Number Field */}
             <div className="space-y-1">
-              <Label className="text-sm font-medium">
-                {t("RequestDemoModal.fields.phoneNumber")}
-              </Label>
-              <div className="flex gap-2">
-                <Select
-                  value={selectedPhoneCode}
-                  onValueChange={handlePhoneCodeChange}
-                >
-                  <SelectTrigger className="w-24 h-9 shrink-0">
-                    <SelectValue
-                      placeholder={t(
-                        "RequestDemoModal.fields.phoneCodePlaceholder",
-                      )}
-                    />
-                  </SelectTrigger>
-                  <SelectContent>
-                    {countryCodes?.map(
-                      (item: { code: string; country: string }) => (
-                        <SelectItem key={item.code} value={item.code}>
-                          {item.code}
-                        </SelectItem>
-                      ),
-                    )}
-                  </SelectContent>
-                </Select>
+              <InputGroup className="h-11 rounded-xs">
+                <InputGroupAddon align="inline-start">
+                  <CountryCodeSelect
+                    value={selectedPhoneCode}
+                    onValueChange={handlePhoneCodeChange}
+                    countryCodes={countryCodes}
+                  />
+                  <span className="text-sm font-medium">
+                    {selectedPhoneCode}
+                  </span>
+                </InputGroupAddon>
                 <Input
-                  placeholder={t(
-                    "RequestDemoModal.fields.phoneNumberPlaceholder",
-                  )}
                   {...register("phoneNumber")}
-                  className="flex-1 min-w-0 h-9"
+                  className="border-0 shadow-none focus-visible:ring-0 focus-visible:ring-offset-0"
+                  data-slot="input-group-control"
                 />
-              </div>
-              {errors.phoneNumber && (
-                <p className="text-red-500 text-sm">
-                  {errors.phoneNumber.message}
+              </InputGroup>
+              {(errors.phoneNumber || errors.phoneCode) && (
+                <p className="text-destructive text-sm">
+                  {errors.phoneNumber?.message || errors.phoneCode?.message}
                 </p>
               )}
             </div>
 
-            {/* Job Title Field */}
             <div className="space-y-1">
-              <Label htmlFor="jobTitle" className="text-sm font-medium">
-                {t("RequestDemoModal.fields.jobTitle")}
-              </Label>
               <Select
                 value={selectedJobTitle}
                 onValueChange={handleJobTitleChange}
               >
-                <SelectTrigger className="h-9 w-full">
+                <SelectTrigger className="w-full">
                   <SelectValue
                     placeholder={t(
                       "RequestDemoModal.fields.jobTitlePlaceholder",
@@ -229,81 +206,68 @@ export function RequestDemoModal({
                 </SelectContent>
               </Select>
               {errors.jobTitle && (
-                <p className="text-red-500 text-sm">
+                <p className="text-destructive text-sm">
                   {errors.jobTitle.message}
                 </p>
               )}
             </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            {/* Industry Sector Field */}
-            <div className="space-y-1">
-              <Label htmlFor="industrySector" className="text-sm font-medium">
-                {t("RequestDemoModal.fields.industrySector")}
-              </Label>
-              <Select
-                value={selectedIndustrySector}
-                onValueChange={handleIndustrySectorChange}
-              >
-                <SelectTrigger className="h-9 w-full">
-                  <SelectValue
-                    placeholder={t(
-                      "RequestDemoModal.fields.industrySectorPlaceholder",
-                    )}
-                  />
-                </SelectTrigger>
-                <SelectContent>
-                  {industrySectors?.map((sector: string) => (
-                    <SelectItem key={sector} value={sector}>
-                      {sector}
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
-              {errors.industrySector && (
-                <p className="text-red-500 text-sm">
-                  {errors.industrySector.message}
-                </p>
-              )}
-            </div>
-
-            {/* Solution Field */}
-            <div className="space-y-1">
-              <Label htmlFor="solution" className="text-sm font-medium">
-                {t("RequestDemoModal.fields.solution")}
-              </Label>
-              <Select
-                value={selectedSolution}
-                onValueChange={handleSolutionChange}
-              >
-                <SelectTrigger className="h-9 w-full">
-                  <SelectValue
-                    placeholder={t(
-                      "RequestDemoModal.fields.solutionPlaceholder",
-                    )}
-                  />
-                </SelectTrigger>
-                <SelectContent>
-                  {solutions?.map((sol: string) => (
-                    <SelectItem key={sol} value={sol}>
-                      {sol}
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
-              {errors.solution && (
-                <p className="text-red-500 text-sm">
-                  {errors.solution.message}
-                </p>
-              )}
-            </div>
+          <div className="space-y-1">
+            <Select
+              value={selectedIndustrySector}
+              onValueChange={handleIndustrySectorChange}
+            >
+              <SelectTrigger className="w-full">
+                <SelectValue
+                  placeholder={t(
+                    "RequestDemoModal.fields.industrySectorPlaceholder",
+                  )}
+                />
+              </SelectTrigger>
+              <SelectContent>
+                {industrySectors?.map((sector: string) => (
+                  <SelectItem key={sector} value={sector}>
+                    {sector}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+            {errors.industrySector && (
+              <p className="text-destructive text-sm">
+                {errors.industrySector.message}
+              </p>
+            )}
           </div>
 
-          {/* Submit Button */}
+          <div className="space-y-1">
+            <Select
+              value={selectedSolution}
+              onValueChange={handleSolutionChange}
+            >
+              <SelectTrigger className="w-full">
+                <SelectValue
+                  placeholder={t("RequestDemoModal.fields.solutionPlaceholder")}
+                />
+              </SelectTrigger>
+              <SelectContent>
+                {solutions?.map((sol: string) => (
+                  <SelectItem key={sol} value={sol}>
+                    {sol}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+            {errors.solution && (
+              <p className="text-destructive text-sm">
+                {errors.solution.message}
+              </p>
+            )}
+          </div>
+
           <Button
             type="submit"
-            className="w-full h-9 bg-green-600 hover:bg-green-700 text-white font-semibold mt-2"
+            className="max-w-fit rounded-xs w-full transition ease-in-out duration-150 disabled:cursor-not-allowed text-center font-medium text-body-lg leading-5.5 lg:leading-6 px-6 py-3 bg-green-600 text-white hover:bg-green-900 active:bg-green-950 disabled:bg-slate-300 min-w-full"
           >
             {t("RequestDemoModal.submitButton")}
           </Button>

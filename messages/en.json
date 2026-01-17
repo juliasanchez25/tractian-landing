@@ -523,18 +523,10 @@
     "title": "Request Your Demo",
     "description": "Fill in the fields to talk to a specialist and understand the benefits that our solutions offer for your maintenance operations.",
     "fields": {
-      "name": "Name",
       "namePlaceholder": "Enter your name",
-      "workEmail": "Work Email",
       "workEmailPlaceholder": "Enter your work email",
-      "phoneNumber": "Phone Number",
-      "phoneCodePlaceholder": "Code",
-      "phoneNumberPlaceholder": "Phone number",
-      "jobTitle": "Job Title",
       "jobTitlePlaceholder": "Select your job title",
-      "industrySector": "Industry Sector",
       "industrySectorPlaceholder": "Select your industry",
-      "solution": "Select the solution of most interest",
       "solutionPlaceholder": "Select a solution"
     },
     "jobTitles": [
@@ -565,43 +557,15 @@
     "countryCodes": [
       {
         "code": "+1",
-        "country": "United States"
+        "country": "Estados Unidos"
       },
       {
         "code": "+55",
-        "country": "Brazil"
+        "country": "Brasil"
       },
       {
         "code": "+34",
-        "country": "Spain"
-      },
-      {
-        "code": "+44",
-        "country": "United Kingdom"
-      },
-      {
-        "code": "+33",
-        "country": "France"
-      },
-      {
-        "code": "+49",
-        "country": "Germany"
-      },
-      {
-        "code": "+39",
-        "country": "Italy"
-      },
-      {
-        "code": "+81",
-        "country": "Japan"
-      },
-      {
-        "code": "+86",
-        "country": "China"
-      },
-      {
-        "code": "+91",
-        "country": "India"
+        "country": "Espanha"
       }
     ],
     "submitButton": "Request demo",
@@ -613,10 +577,7 @@
       "jobTitleRequired": "Job title is required",
       "industrySectorRequired": "Industry sector is required",
       "solutionRequired": "Solution is required",
-      "countryCodeRequired": "Please select a country code",
-      "jobTitleRequiredSelect": "Please select a job title",
-      "industrySectorRequiredSelect": "Please select an industry sector",
-      "solutionRequiredSelect": "Please select a solution"
+      "countryCodeRequired": "Please select a country code"
     },
     "successMessage": "Form Data:\n\nName: {name}\nEmail: {email}\nPhone: {phone} {phoneNumber}\nJob Title: {jobTitle}\nIndustry Sector: {industrySector}\nSolution: {solution}"
   }

@@ -13,8 +13,8 @@ export default function Error({
 
   return (
     <div className="flex min-h-screen flex-col items-center justify-center gap-4">
-      <h2 className="text-2xl font-bold text-slate-700">{t("title")}</h2>
-      <p className="text-slate-500">{error.message}</p>
+      <h2 className="heading-h2 text-slate-700">{t("title")}</h2>
+      <p className="text-body-md text-slate-500">{error.message}</p>
       <button
         onClick={reset}
         className="rounded-sm bg-primary px-4 py-2 text-white transition-colors hover:bg-blue-700"

@@ -19,10 +19,8 @@ export function FaqSection() {
     <section className="relative w-full bg-slate-100 py-12 lg:py-16">
       <div className="mx-auto flex max-w-2xl flex-col items-center gap-8 px-4 lg:max-w-6xl lg:gap-16">
         <article className="flex w-full flex-col items-center gap-2 lg:gap-4">
-          <p className="text-center font-medium uppercase text-primary text-sm">
-            FAQ
-          </p>
-          <h2 className="text-center font-semibold text-2xl lg:font-bold lg:text-4xl">
+          <p className="subtitle-md text-center text-primary">FAQ</p>
+          <h2 className="heading-h2 text-center text-slate-700">
             {t("title")}
           </h2>
         </article>
@@ -39,10 +37,10 @@ export function FaqSection() {
               value={`item-${index}`}
               className="rounded-xs border border-slate-300 bg-transparent px-4 transition-colors hover:border-blue-600 last:border-b"
             >
-              <AccordionTrigger className="text-left text-base hover:text-primary hover:no-underline lg:font-semibold data-[state=open]:text-primary">
+              <AccordionTrigger className="text-body-md text-left font-semibold hover:text-primary hover:no-underline data-[state=open]:text-primary">
                 {item.question}
               </AccordionTrigger>
-              <AccordionContent className="text-slate-500 text-base">
+              <AccordionContent className="text-body-md text-slate-500">
                 {item.answer}
               </AccordionContent>
             </AccordionItem>
