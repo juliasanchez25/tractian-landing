@@ -1,23 +1,31 @@
 import type { Metadata } from "next";
-import { NextIntlClientProvider } from "next-intl";
+import { NextIntlClientProvider, useTranslations } from "next-intl";
 import { Inter } from "next/font/google";
 import { hasLocale } from "next-intl";
 import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 import "./globals.css";
 import { NavRoot } from "@/components/custom/nav";
-import Footer from "@/components/custom/footer";
+import { getTranslations } from "next-intl/server";
 
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "For the Plant Manager Who Wants to Lead with Confidence",
-  description:
-    "Make smarter decisions, faster. Tractian gives you clarity, control, and confidence - so you can lead the plant and prove the ROI.",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "Hero" });
+
+  return {
+    title: t("title"),
+    description: t("description"),
+  };
+}
 
 export default async function RootLayout({
   children,
@@ -37,8 +45,8 @@ export default async function RootLayout({
       <body className={`${inter.variable} antialiased`}>
         <NextIntlClientProvider>
           <NavRoot />
-          <main className="bg-red-500 min-h-screen flex-1">{children}</main>
-          <Footer />
+          <main className="min-h-screen flex-1">{children}</main>
+          {/* <Footer /> */}
         </NextIntlClientProvider>
       </body>
     </html>

@@ -52,7 +52,7 @@ import {
   NavbarAvailableLanguages,
   NavbarLanguageOptions,
   NavbarActiveMenuItemProps,
-} from "./types";
+} from "./nav.types";
 
 export function NavRoot() {
   const [activeMenu, setActiveMenu] = React.useState<NavbarMenu | null>(null);
@@ -84,7 +84,7 @@ function Navbar({ activeMenu, setActiveMenu }: NavbarCommonProps) {
 
   const menuOptions = Object.values(NavbarMenu);
   const languageOptions = Object.keys(
-    NavbarAvailableLanguages
+    NavbarAvailableLanguages,
   ) as NavbarLanguageOptions;
 
   return (
@@ -125,7 +125,7 @@ function Navbar({ activeMenu, setActiveMenu }: NavbarCommonProps) {
                       className={cn(
                         "flex w-full items-center gap-x-2 rounded-sm px-3 py-2 text-md hover:bg-slate-100 lg:py-2 lg:text-sm cursor-pointer",
                         locale === NavbarAvailableLanguages[language] &&
-                          "bg-slate-200 hover:bg-slate-200"
+                          "bg-slate-200 hover:bg-slate-200",
                       )}
                     >
                       {language}
@@ -172,7 +172,7 @@ function NavbarMenuItem({
             "select-none font-medium transition-colors",
             isActive
               ? "text-primary"
-              : "text-accent-foreground hover:text-primary group-hover:text-primary"
+              : "text-accent-foreground hover:text-primary group-hover:text-primary",
           )}
         >
           {itemTitle}
@@ -182,7 +182,7 @@ function NavbarMenuItem({
             "size-5 transition-all",
             isActive
               ? "text-primary rotate-180"
-              : "text-accent-foreground group-hover:text-primary"
+              : "text-accent-foreground group-hover:text-primary",
           )}
           strokeWidth={1}
         />
@@ -248,7 +248,7 @@ function NavbarActiveMenu({ activeMenu, setActiveMenu }: NavbarCommonProps) {
             "fixed top-18.25 z-40 bg-white border-b border-slate-200 shadow-lg",
             activeMenu && smallMenus.includes(activeMenu)
               ? "left-1/2 -translate-x-1/2 w-full max-w-242.5"
-              : "left-0 right-0"
+              : "left-0 right-0",
           )}
         >
           <div className="px-8 pb-12 pt-8 max-w-7xl mx-auto">

@@ -169,6 +169,10 @@
     },
     "Demo": "Get Demo"
   },
+  "Meta": {
+    "title": "For the Plant Manager Who Wants to Lead with Confidence",
+    "description": "Make smarter decisions, faster. Tractian gives you clarity, control, and confidence - so you can lead the plant and prove the ROI."
+  },
   "Hero": {
     "subtitle": "Keep operations running. Hit your targets.",
     "title": "For the Plant Manager\nWho Wants to Lead with\nConfidence",
@@ -197,7 +201,8 @@
       }
     ]
   },
-  "Results": {
+  "HowItWorks": {
+    "title": "Built for smarter oversight and real results",
     "items": [
       {
         "tabTitle": "Reports for Scalability",
@@ -236,8 +241,8 @@
       {
         "tabTitle": "No Labor Gaps",
         "contentTitle": "Get ahead of workload imbalances and ensure your staff is focused where it matters most.",
-        "description": "Visualize each technician or team’s workload and make data-driven decisions to avoid gaps or overloaded teams.",
         "listItem": [
+          "Visualize each technician or team’s workload to avoid gaps or overloaded teams",
           "Flag gaps or bottlenecks in your planning",
           "Reduce stress and improve results by aligning preventive tasks with real priorities",
           "Automate scheduling to keep things moving"
@@ -400,8 +405,8 @@
     ]
   },
   "Footer": {
-    "sections": [
-      {
+    "sections": {
+      "sensors": {
         "title": "Sensors",
         "items": [
           { "key": "conditionMonitoring", "label": "Condition Monitoring" },
@@ -416,7 +421,7 @@
           }
         ]
       },
-      {
+      "cmms": {
         "title": "CMMS",
         "items": [
           { "key": "aiPoweredCmms", "label": "AI-Powered CMMS" },
@@ -437,7 +442,7 @@
           { "key": "integrations", "label": "Integrations" }
         ]
       },
-      {
+      "oee": {
         "title": "OEE",
         "items": [
           { "key": "productionMonitoring", "label": "Production Monitoring" },
@@ -455,7 +460,7 @@
           { "key": "customDashboards", "label": "Custom Dashboards" }
         ]
       },
-      {
+      "support": {
         "title": "Support",
         "items": [
           { "key": "contactUs", "label": "Contact Us" },
@@ -470,7 +475,7 @@
           { "key": "hardwareWarranty", "label": "Hardware Warranty Policy" }
         ]
       },
-      {
+      "about": {
         "title": "About",
         "items": [
           { "key": "aboutUs", "label": "About Us" },
@@ -480,7 +485,7 @@
           { "key": "press", "label": "Press" }
         ]
       },
-      {
+      "downloadApp": {
         "title": "Download Our App",
         "items": [
           { "key": "appleStore", "label": "Apple Store" },
@@ -488,12 +493,18 @@
           { "key": "sapStore", "label": "SAP Store" }
         ]
       }
-    ],
+    },
     "company": {
+      "name": "Tractian",
+      "description": "The complete maintenance and reliability platform for industrial teams.",
       "title": "TRACTIAN TECHNOLOGIES INC",
       "phone": "+1 (833) GET-TRAC"
     },
     "address": "201 17th Street NW, Atlanta, GA 30363",
-    "privacy": "Your Privacy Choices"
+    "privacy": "Your Privacy Choices",
+    "backToTop": "Back to top",
+    "allRightsReserved": "All rights reserved.",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service"
   }
 }

@@ -1,7 +1,6 @@
 import { LucideProps } from "lucide-react";
 import React from "react";
 
-// Nav
 export interface NavbarMenuItemProps {
   itemTitle: string;
   isActive?: boolean;

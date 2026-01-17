@@ -162,6 +162,10 @@
     },
     "Demo": "Solicita una demo"
   },
+  "Meta": {
+    "title": "Tractian para Gerentes de Planta",
+    "description": "Controla mantenimiento, fortalece confiabilidad y reduce costos desde una sola plataforma. Toma decisiones rápidas, demostrando ROI."
+  },
   "Hero": {
     "subtitle": "Mantén la operación en marcha. Supera tus metas.",
     "title": "Para el Gerente de Planta\nque quiere liderar con\nconfianza",
@@ -190,7 +194,8 @@
       }
     ]
   },
-  "Results": {
+  "HowItWorks": {
+    "title": "Creado para una dirección inteligente y estratégica",
     "items": [
       {
         "tabTitle": "Reportes con valor escalable",
@@ -229,10 +234,11 @@
       {
         "tabTitle": "Sin brechas de personal",
         "contentTitle": "Anticípate a los desequilibrios de carga laboral y asegúrate de que tu equipo tiene sus prioridades alineadas.",
-        "description": "Visualiza la carga de trabajo de cada técnico o equipo. Toma decisiones basadas en datos para evitar brechas o equipos sobrecargados.",
         "listItem": [
+          "Visualiza la carga de trabajo de cada técnico o equipo para evitar sobrecargas",
           "Detecta brechas o cuellos de botella en tu planificación",
-          "Reduce el estrés y mejora los resultados alineando las tareas preventivas con las prioridades reales"
+          "Reduce el estrés y mejora los resultados alineando las tareas preventivas con las prioridades reales",
+          "Automatiza la programación para mantener la operación en movimiento"
         ]
       }
     ]
@@ -396,8 +402,8 @@
     ]
   },
   "Footer": {
-    "sections": [
-      {
+    "sections": {
+      "onlineMonitoring": {
         "title": "Monitoreo Online",
         "items": [
           { "key": "overview", "label": "Visión General" },
@@ -407,7 +413,7 @@
           { "key": "supervisory", "label": "Supervisor" }
         ]
       },
-      {
+      "energyManagement": {
         "title": "Gestión de Energía",
         "items": [
           { "key": "overview", "label": "Monitoreo de Producción" },
@@ -422,7 +428,7 @@
           { "key": "supervisory", "label": "Supervisor" }
         ]
       },
-      {
+      "assetManagement": {
         "title": "Gestión de Activos",
         "items": [
           { "key": "overview", "label": "Visión General" },
@@ -447,16 +453,17 @@
           }
         ]
       },
-      {
+      "support": {
         "title": "Soporte",
         "items": [
           { "key": "contactUs", "label": "Hable con Nosotros" },
           { "key": "helpCenter", "label": "Centro de Ayuda" },
           { "key": "policies", "label": "Políticas" },
+          { "key": "termsOfUse", "label": "Términos de Uso" },
           { "key": "trustCenter", "label": "Centro de Confianza" }
         ]
       },
-      {
+      "about": {
         "title": "Sobre",
         "items": [
           { "key": "aboutUs", "label": "Sobre Nosotros" },
@@ -466,7 +473,7 @@
           { "key": "community", "label": "Comunidad" }
         ]
       },
-      {
+      "downloadApp": {
         "title": "Download Our App",
         "items": [
           { "key": "appleStore", "label": "Apple Store" },
@@ -474,11 +481,15 @@
           { "key": "sapStore", "label": "SAP Store" }
         ]
       }
-    ],
+    },
     "company": {
+      "name": "Tractian",
+      "description": "La plataforma completa de mantenimiento y confiabilidad para equipos industriales.",
       "title": "Tractian Tecnología Industrial S. de R.L. de C.V.",
+      "cnpj": "RFC: TEC221201H50",
       "phone": "+52 (800) 953-8998"
     },
+    "backToTop": "Volver arriba",
     "address": "Córdoba 23, Cuauhtémoc, 06700, Ciudad de México, CDMX",
     "privacy": "Tus elecciones de privacidad"
   }

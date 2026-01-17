@@ -162,6 +162,10 @@
     },
     "Demo": "Demonstração"
   },
+  "Meta": {
+    "title": "Tractian para Gerentes Industriais",
+    "description": "Para Gerentes Industriais que controlam riscos, custos e desempenho. A Tractian entrega a visibilidade financeira e operacional do seu chão de fábrica."
+  },
   "Hero": {
     "subtitle": "Operação contínua, ROI comprovado",
     "title": "Para o Gerente Industrial\nque decide com dados,\nsem adivinhação",
@@ -190,8 +194,8 @@
       }
     ]
   },
-  "Results": {
-    "title": "Resultados",
+  "HowItWorks": {
+    "title": "Projetada para supervisão inteligente e resultados concretos",
     "items": [
       {
         "tabTitle": "Escale Baseado em Dados",
@@ -234,7 +238,8 @@
         "listItem": [
           "Visualize a carga de cada técnico ou equipe para evitar sobrecarga",
           "Sinalize gargalos ou colisões no planejamento com um clique",
-          "Reduza atritos alinhando tarefas preventivas a prioridades reais"
+          "Reduza atritos alinhando tarefas preventivas a prioridades reais",
+          "Automatize o agendamento para manter a operação em movimento"
         ]
       }
     ]
@@ -398,8 +403,8 @@
     ]
   },
   "Footer": {
-    "sections": [
-      {
+    "sections": {
+      "onlineMonitoring": {
         "title": "Monitoramento Online",
         "items": [
           { "key": "overview", "label": "Visão Geral" },
@@ -409,7 +414,7 @@
           { "key": "supervisory", "label": "Supervisório" }
         ]
       },
-      {
+      "energyManagement": {
         "title": "Gestão de Energia",
         "items": [
           { "key": "overview", "label": "Visão Geral" },
@@ -424,7 +429,7 @@
           { "key": "supervisory", "label": "Supervisório" }
         ]
       },
-      {
+      "assetManagement": {
         "title": "Gestão de Ativos",
         "items": [
           { "key": "overview", "label": "Visão Geral" },
@@ -449,7 +454,7 @@
           }
         ]
       },
-      {
+      "support": {
         "title": "Suporte",
         "items": [
           { "key": "contactUs", "label": "Fale Conosco" },
@@ -459,7 +464,7 @@
           { "key": "trustCenter", "label": "Trust Center" }
         ]
       },
-      {
+      "about": {
         "title": "Sobre",
         "items": [
           { "key": "aboutUs", "label": "Sobre Nós" },
@@ -469,7 +474,7 @@
           { "key": "community", "label": "Comunidade" }
         ]
       },
-      {
+      "downloadApp": {
         "title": "Download Our App",
         "items": [
           { "key": "appleStore", "label": "Apple Store" },
@@ -477,12 +482,15 @@
           { "key": "sapStore", "label": "SAP Store" }
         ]
       }
-    ],
+    },
     "company": {
+      "name": "Tractian",
+      "description": "A plataforma completa de manutenção e confiabilidade para equipes industriais.",
       "title": "© Tractian Tecnologia Ltda",
       "cnpj": "CNPJ: 35.755.699/0001-84",
       "phone": "0800 110 2020"
     },
+    "backToTop": "Voltar ao topo",
     "address": "R. Amaro Guerra, 415 - Chácara Santo Antônio, São Paulo - SP, 04711-020",
     "privacy": "Suas escolhas de privacidade"
   }
