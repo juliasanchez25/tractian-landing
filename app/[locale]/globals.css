@@ -45,13 +45,6 @@
   --radius-4xl: calc(var(--radius) + 16px);
 }
 
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-} */
-
 :root {
   --radius: 0.625rem;
   --background: oklch(1 0 0);
@@ -149,7 +142,6 @@ body {
   font-family: var(--font-inter);
 }
 
-/* Typography System - Body Text */
 .text-body-sm {
   font-size: 14px;
   font-weight: 400;
@@ -218,7 +210,6 @@ body {
   }
 }
 
-/* Typography System - Subtitles */
 .subtitle-sm {
   font-size: 12px;
   font-weight: 400;
@@ -235,7 +226,6 @@ body {
   letter-spacing: 0.05em;
 }
 
-/* Typography System - Section Label */
 .section-label {
   font-size: 14px;
   font-weight: 500;
@@ -245,7 +235,6 @@ body {
   color: var(--color-primary);
 }
 
-/* Custom animations */
 @layer utilities {
   .animate-in {
     animation: fadeIn 0.3s ease-in;

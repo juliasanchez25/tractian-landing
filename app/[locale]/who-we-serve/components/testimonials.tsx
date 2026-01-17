@@ -90,7 +90,6 @@ export function TestimonialsSection() {
           {t("title")}
         </h2>
 
-        {/* Carrossel Mobile */}
         <div className="w-full sm:hidden">
           <div
             ref={carouselRef}
@@ -141,7 +140,6 @@ export function TestimonialsSection() {
             </div>
           </div>
 
-          {/* Indicadores de paginação */}
           <div className="mt-6 flex justify-center gap-2">
             {items.map((_, index) => (
               <button
@@ -156,7 +154,6 @@ export function TestimonialsSection() {
           </div>
         </div>
 
-        {/* Grid Desktop */}
         <div className="hidden h-auto w-full items-stretch gap-8 sm:grid sm:grid-cols-2 lg:flex lg:flex-row lg:justify-between lg:gap-12">
           {items.map((item) => (
             <article

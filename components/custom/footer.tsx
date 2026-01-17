@@ -157,7 +157,6 @@ export function Footer() {
   return (
     <footer className="bg-blue-950 px-4 py-12 lg:py-20">
       <div className="mx-auto flex w-full max-w-7xl flex-col">
-        {/* Badges e Back to top */}
         <section className="mb-8 flex w-full flex-col gap-x-16 gap-y-8 lg:mb-12 lg:flex-row lg:items-center lg:justify-between">
           <div className="flex w-full flex-wrap items-center justify-center gap-4 lg:w-auto lg:justify-start lg:gap-x-6 xl:flex-nowrap">
             {badges.map((badge, index) => (
@@ -185,7 +184,6 @@ export function Footer() {
           </a>
         </section>
 
-        {/* Links das colunas */}
         <section className="mb-8 grid grid-cols-2 gap-8 lg:mb-12 lg:grid-cols-6 lg:gap-6">
           {onlineMonitoring && energyManagement && assetManagement && (
             <>
@@ -209,10 +207,8 @@ export function Footer() {
           </div>
         </section>
 
-        {/* Bottom section - Company info e Social icons */}
         <section className="border-t border-slate-800 pt-8">
           <div className="flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-center">
-            {/* Logo e info da empresa */}
             <div className="flex flex-col gap-4">
               <FooterLogo />
               <div className="text-white text-sm">
@@ -225,9 +221,7 @@ export function Footer() {
               </div>
             </div>
 
-            {/* Endereço e Social icons */}
             <div className="flex flex-col items-start gap-6 lg:items-end">
-              {/* Social icons */}
               <div className="flex items-center gap-4">
                 <Link
                   href="https://www.linkedin.com/company/tractian"
@@ -315,12 +309,10 @@ export function Footer() {
                 </Link>
               </div>
 
-              {/* Endereço */}
               <p className="text-white text-sm text-left lg:text-right">
                 {t("address")}
               </p>
 
-              {/* Privacy choices */}
               <button className="flex items-center gap-2 text-white text-sm hover:text-white transition">
                 <svg className="h-5 w-5" viewBox="0 0 30 14" fill="none">
                   <rect

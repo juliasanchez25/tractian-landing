@@ -46,7 +46,6 @@ export default async function RootLayout({
         <NextIntlClientProvider>
           <NavRoot />
           <main className="min-h-screen flex-1">{children}</main>
-          {/* <Footer /> */}
         </NextIntlClientProvider>
       </body>
     </html>
