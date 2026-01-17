@@ -8,6 +8,7 @@ export function StepsSection() {
   return (
     <section className="bg-slate-100 px-4 py-12 lg:py-16">
       <div className="mx-auto flex w-full max-w-2xl flex-col items-start gap-8 lg:max-w-6xl lg:items-center lg:gap-12">
+        <p className="uppercase text-blue-600 tracking-wide">{t("subtitle")}</p>
         <h2 className="text-left font-bold text-2xl lg:mb-4 lg:text-center lg:text-3xl">
           {t("title")}
         </h2>

@@ -147,7 +147,7 @@ export function Footer() {
   };
 
   return (
-    <footer className="bg-[#0a1628] px-4 py-12 lg:py-20">
+    <footer className="bg-blue-950 px-4 py-12 lg:py-20">
       <div className="mx-auto flex w-full max-w-7xl flex-col">
         {/* Badges e Back to top */}
         <section className="mb-8 flex w-full flex-col gap-x-16 gap-y-8 lg:mb-12 lg:flex-row lg:items-center lg:justify-between">

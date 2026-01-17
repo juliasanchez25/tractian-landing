@@ -493,5 +493,106 @@
     "backToTop": "Voltar ao topo",
     "address": "R. Amaro Guerra, 415 - Chácara Santo Antônio, São Paulo - SP, 04711-020",
     "privacy": "Suas escolhas de privacidade"
+  },
+  "RequestDemoModal": {
+    "title": "Solicite Sua Demonstração",
+    "description": "Preencha os campos para conversar com um especialista e entender os benefícios que nossas soluções oferecem para suas operações de manutenção.",
+    "fields": {
+      "name": "Nome",
+      "namePlaceholder": "Digite seu nome",
+      "workEmail": "Email Corporativo",
+      "workEmailPlaceholder": "Digite seu email corporativo",
+      "phoneNumber": "Número de Telefone",
+      "phoneCodePlaceholder": "Código",
+      "phoneNumberPlaceholder": "Número de telefone",
+      "jobTitle": "Cargo",
+      "jobTitlePlaceholder": "Selecione seu cargo",
+      "industrySector": "Setor Industrial",
+      "industrySectorPlaceholder": "Selecione seu setor",
+      "solution": "Selecione a solução de maior interesse",
+      "solutionPlaceholder": "Selecione uma solução"
+    },
+    "jobTitles": [
+      "Gerente de Planta",
+      "Gerente de Manutenção",
+      "Gerente de Operações",
+      "Gerente de Instalações",
+      "Diretor de Operações",
+      "Outro"
+    ],
+    "industrySectors": [
+      "Manufatura",
+      "Óleo e Gás",
+      "Alimentos e Bebidas",
+      "Farmacêutica",
+      "Mineração",
+      "Logística",
+      "Utilities",
+      "Outro"
+    ],
+    "solutions": [
+      "Gestão de Manutenção",
+      "Gestão de Ativos",
+      "Gestão de Ordens de Serviço",
+      "Manutenção Preditiva",
+      "Conformidade e Segurança"
+    ],
+    "countryCodes": [
+      {
+        "code": "+1",
+        "country": "Estados Unidos"
+      },
+      {
+        "code": "+55",
+        "country": "Brasil"
+      },
+      {
+        "code": "+34",
+        "country": "Espanha"
+      },
+      {
+        "code": "+44",
+        "country": "Reino Unido"
+      },
+      {
+        "code": "+33",
+        "country": "França"
+      },
+      {
+        "code": "+49",
+        "country": "Alemanha"
+      },
+      {
+        "code": "+39",
+        "country": "Itália"
+      },
+      {
+        "code": "+81",
+        "country": "Japão"
+      },
+      {
+        "code": "+86",
+        "country": "China"
+      },
+      {
+        "code": "+91",
+        "country": "Índia"
+      }
+    ],
+    "submitButton": "Solicitar demonstração",
+    "validationErrors": {
+      "nameRequired": "Nome é obrigatório",
+      "emailInvalid": "Endereço de email inválido",
+      "phoneCodeRequired": "Código de país é obrigatório",
+      "phoneNumberRequired": "Número de telefone é obrigatório",
+      "jobTitleRequired": "Cargo é obrigatório",
+      "industrySectorRequired": "Setor industrial é obrigatório",
+      "solutionRequired": "Solução é obrigatória",
+      "countryCodeRequired": "Por favor, selecione um código de país",
+      "jobTitleRequiredSelect": "Por favor, selecione um cargo",
+      "industrySectorRequiredSelect": "Por favor, selecione um setor industrial",
+      "solutionRequiredSelect": "Por favor, selecione uma solução"
+    },
+    "successMessage": "Dados do Formulário:\n\nNome: {name}\nEmail: {email}\nTelefone: {phone} {phoneNumber}\nCargo: {jobTitle}\nSetor Industrial: {industrySector}\nSolução: {solution}"
   }
 }

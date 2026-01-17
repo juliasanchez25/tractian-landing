@@ -492,5 +492,106 @@
     "backToTop": "Volver arriba",
     "address": "Córdoba 23, Cuauhtémoc, 06700, Ciudad de México, CDMX",
     "privacy": "Tus elecciones de privacidad"
+  },
+  "RequestDemoModal": {
+    "title": "Solicita Tu Demostración",
+    "description": "Completa los campos para hablar con un especialista y entender los beneficios que nuestras soluciones ofrecen para tus operaciones de mantenimiento.",
+    "fields": {
+      "name": "Nombre",
+      "namePlaceholder": "Ingresa tu nombre",
+      "workEmail": "Correo Corporativo",
+      "workEmailPlaceholder": "Ingresa tu correo corporativo",
+      "phoneNumber": "Número de Teléfono",
+      "phoneCodePlaceholder": "Código",
+      "phoneNumberPlaceholder": "Número de teléfono",
+      "jobTitle": "Puesto",
+      "jobTitlePlaceholder": "Selecciona tu puesto",
+      "industrySector": "Sector Industrial",
+      "industrySectorPlaceholder": "Selecciona tu sector",
+      "solution": "Selecciona la solución de mayor interés",
+      "solutionPlaceholder": "Selecciona una solución"
+    },
+    "jobTitles": [
+      "Gerente de Planta",
+      "Gerente de Mantenimiento",
+      "Gerente de Operaciones",
+      "Gerente de Instalaciones",
+      "Director de Operaciones",
+      "Otro"
+    ],
+    "industrySectors": [
+      "Manufactura",
+      "Petróleo y Gas",
+      "Alimentos y Bebidas",
+      "Farmacéutica",
+      "Minería",
+      "Logística",
+      "Servicios",
+      "Otro"
+    ],
+    "solutions": [
+      "Gestión de Mantenimiento",
+      "Gestión de Activos",
+      "Gestión de Órdenes de Trabajo",
+      "Mantenimiento Predictivo",
+      "Cumplimiento y Seguridad"
+    ],
+    "countryCodes": [
+      {
+        "code": "+1",
+        "country": "Estados Unidos"
+      },
+      {
+        "code": "+55",
+        "country": "Brasil"
+      },
+      {
+        "code": "+34",
+        "country": "España"
+      },
+      {
+        "code": "+44",
+        "country": "Reino Unido"
+      },
+      {
+        "code": "+33",
+        "country": "Francia"
+      },
+      {
+        "code": "+49",
+        "country": "Alemania"
+      },
+      {
+        "code": "+39",
+        "country": "Italia"
+      },
+      {
+        "code": "+81",
+        "country": "Japón"
+      },
+      {
+        "code": "+86",
+        "country": "China"
+      },
+      {
+        "code": "+91",
+        "country": "India"
+      }
+    ],
+    "submitButton": "Solicitar demostración",
+    "validationErrors": {
+      "nameRequired": "El nombre es obligatorio",
+      "emailInvalid": "Dirección de correo inválida",
+      "phoneCodeRequired": "El código de país es obligatorio",
+      "phoneNumberRequired": "El número de teléfono es obligatorio",
+      "jobTitleRequired": "El puesto es obligatorio",
+      "industrySectorRequired": "El sector industrial es obligatorio",
+      "solutionRequired": "La solución es obligatoria",
+      "countryCodeRequired": "Por favor, selecciona un código de país",
+      "jobTitleRequiredSelect": "Por favor, selecciona un puesto",
+      "industrySectorRequiredSelect": "Por favor, selecciona un sector industrial",
+      "solutionRequiredSelect": "Por favor, selecciona una solución"
+    },
+    "successMessage": "Datos del Formulario:\n\nNombre: {name}\nCorreo: {email}\nTeléfono: {phone} {phoneNumber}\nPuesto: {jobTitle}\nSector Industrial: {industrySector}\nSolución: {solution}"
   }
 }

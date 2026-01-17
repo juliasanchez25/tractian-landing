@@ -6,6 +6,7 @@ import { Link, usePathname } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 import { Logo } from "../icons/logo";
 import { Button } from "../ui/button";
+import { RequestDemoModal } from "./request-demo-modal";
 import Image from "next/image";
 import {
   Activity,
@@ -56,11 +57,16 @@ import {
 
 export function NavRoot() {
   const [activeMenu, setActiveMenu] = React.useState<NavbarMenu | null>(null);
+  const [requestDemoOpen, setRequestDemoOpen] = React.useState(false);
 
   return (
     <>
       <header className="sticky top-0 z-40 flex w-full flex-col items-center justify-center transition-colors duration-default ease-in-out bg-slate-100 border-b border-slate-200">
-        <Navbar activeMenu={activeMenu} setActiveMenu={setActiveMenu} />
+        <Navbar
+          activeMenu={activeMenu}
+          setActiveMenu={setActiveMenu}
+          onRequestDemoClick={() => setRequestDemoOpen(true)}
+        />
         {activeMenu && (
           <NavbarActiveMenu
             activeMenu={activeMenu}
@@ -68,11 +74,19 @@ export function NavRoot() {
           />
         )}
       </header>
+      <RequestDemoModal
+        open={requestDemoOpen}
+        onOpenChange={setRequestDemoOpen}
+      />
     </>
   );
 }
 
-function Navbar({ activeMenu, setActiveMenu }: NavbarCommonProps) {
+function Navbar({
+  activeMenu,
+  setActiveMenu,
+  onRequestDemoClick,
+}: NavbarCommonProps) {
   const t = useTranslations("Navbar");
 
   const locale = useLocale();
@@ -141,7 +155,11 @@ function Navbar({ activeMenu, setActiveMenu }: NavbarCommonProps) {
           >
             Login
           </Link>
-          <Button variant={"outline"} className="hover:border-2">
+          <Button
+            variant={"outline"}
+            className="hover:border-2"
+            onClick={onRequestDemoClick}
+          >
             {t("Demo")}
           </Button>
         </div>

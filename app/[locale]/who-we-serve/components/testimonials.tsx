@@ -31,6 +31,7 @@ export function TestimonialsSection() {
   const items = t.raw("items") as Array<{
     name: string;
     role: string;
+    company: string;
     quote: string;
     photo: string;
   }>;
@@ -41,15 +42,16 @@ export function TestimonialsSection() {
         <h2 className="px-4 text-left font-bold text-2xl sm:px-0 lg:text-center lg:text-3xl">
           {t("title")}
         </h2>
-        <div className="grid h-auto w-full grid-cols-1 items-stretch gap-8 sm:grid-cols-2 lg:flex lg:flex-row lg:justify-between lg:gap-12">
+        <div className="hidden h-auto w-full items-stretch gap-8 sm:grid sm:grid-cols-2 lg:flex lg:flex-row lg:justify-between lg:gap-12">
           {items.map((item, index) => (
-            <div key={index} className="flex h-auto w-full flex-col gap-4">
+            <div
+              key={index}
+              className="flex h-auto w-full cursor-grab flex-col gap-4 sm:cursor-default"
+            >
               <div className="flex w-full items-center gap-4">
                 <QuoteIcon />
               </div>
-              <p className="h-full text-slate-500 text-base italic">
-                {item.quote}
-              </p>
+              <p className="h-full text-slate-500 text-quote">{item.quote}</p>
               <div className="flex items-center gap-3 lg:justify-between">
                 <figure className="flex h-12 w-12 items-center justify-center rounded-full lg:h-14 lg:w-14">
                   <Image
@@ -57,17 +59,14 @@ export function TestimonialsSection() {
                     src={item.photo || "/placeholder.svg"}
                     width={120}
                     height={120}
-                    className="h-full w-full rounded-full object-cover"
+                    className="font-bold text-body-sm"
                   />
                 </figure>
-                <div className="flex flex-col">
-                  <p className="font-semibold text-slate-900 text-sm lg:text-base">
-                    {item.name}
-                  </p>
-                  <p className="text-slate-500 text-xs lg:text-sm">
-                    {item.role}
-                  </p>
-                </div>
+                <article className="flex w-full flex-1 flex-col">
+                  <p className="font-bold text-body-sm">{item.name}</p>
+                  <p className="text-body-sm">{item.role}</p>
+                  <p className="font-bold text-body-sm">{item.company}</p>
+                </article>
               </div>
             </div>
           ))}

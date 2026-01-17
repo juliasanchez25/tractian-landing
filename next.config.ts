@@ -6,7 +6,10 @@ const withNextIntl = createNextIntlPlugin();
 const nextConfig: NextConfig = {
   /* config options here */
   images: {
-    remotePatterns: [{ hostname: "imgix.tractian.com" }],
+    remotePatterns: [
+      { hostname: "imgix.tractian.com" },
+      { hostname: "tractian-webpage.s3.us-east-1.amazonaws.com" },
+    ],
   },
 };
 

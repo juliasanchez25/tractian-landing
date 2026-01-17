@@ -135,4 +135,22 @@
   [role="button"]:not([disabled]) {
     cursor: pointer;
   }
+
+  .text-quote {
+    font-size: 14px;
+    font-weight: regular;
+    font-style: italic;
+    line-height: 22px;
+  }
+}
+
+body {
+  color: #334155;
+  font-family: var(--font-inter);
+}
+
+.text-body-sm {
+  font-size: 14px;
+  font-weight: regular;
+  line-height: 22px;
 }

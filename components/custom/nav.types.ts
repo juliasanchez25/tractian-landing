@@ -31,6 +31,7 @@ export interface NavbarActiveMenuItemProps {
 export interface NavbarCommonProps {
   activeMenu: NavbarMenu | null;
   setActiveMenu: React.Dispatch<React.SetStateAction<NavbarMenu | null>>;
+  onRequestDemoClick?: () => void;
 }
 
 export enum NavbarAvailableLanguages {
