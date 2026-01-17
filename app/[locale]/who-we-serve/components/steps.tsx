@@ -17,13 +17,13 @@ export function StepsSection() {
           {items.map((item, index) => (
             <li key={item.title} className="flex h-full w-full flex-col gap-4">
               <span
-                className="flex h-7 w-7 items-center justify-center rounded-sm bg-blue-600 font-semibold text-white text-lg lg:h-8 lg:w-8"
+                className="flex h-7 w-7 items-center justify-center rounded-xs bg-blue-600 font-semibold text-white text-lg lg:h-8 lg:w-8"
                 aria-label={`Step ${index + 1}`}
               >
                 {index + 1}
               </span>
               <article className="flex w-full flex-col gap-1 lg:gap-4">
-                <h3 className="font-bold text-lg">{item.title}</h3>
+                <h3 className="font-bold text-lg lg:text-xl">{item.title}</h3>
                 <p className="text-slate-500 text-base">{item.description}</p>
               </article>
             </li>

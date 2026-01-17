@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Check } from "lucide-react";
 import Image from "next/image";
 import { getCDNUrl } from "@/lib/config";
@@ -45,9 +45,43 @@ interface WhyChooseTabsProps {
 
 export function WhyChooseTabs({ items }: WhyChooseTabsProps) {
   const [activeFeature, setActiveFeature] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsVisible(entry.isIntersecting);
+      },
+      { threshold: 0.3 },
+    );
+
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
+
+    return () => {
+      if (containerRef.current) {
+        observer.unobserve(containerRef.current);
+      }
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!isVisible) return;
+
+    const interval = setInterval(() => {
+      setActiveFeature((prev) => (prev >= items.length - 1 ? 0 : prev + 1));
+    }, 6000);
+
+    return () => clearInterval(interval);
+  }, [items.length, isVisible]);
 
   return (
-    <div className="flex w-full flex-col items-start gap-8 lg:min-h-90 lg:flex-row lg:justify-between">
+    <div
+      className="flex w-full flex-col items-start gap-8 lg:min-h-90 lg:flex-row lg:justify-between"
+      ref={containerRef}
+    >
       <nav
         className="flex h-79 w-full flex-col gap-4 border-l-2 border-slate-300 xs:h-auto lg:gap-6"
         aria-label="Features"
@@ -93,13 +127,16 @@ export function WhyChooseTabs({ items }: WhyChooseTabsProps) {
         ))}
       </nav>
 
-      <div className="relative flex h-full w-full justify-center rounded-sm lg:h-80">
+      <div
+        className="relative flex h-full w-full justify-center rounded-sm lg:h-80"
+        key={activeFeature}
+      >
         <Image
           src={IMAGES[activeFeature]}
           alt={items[activeFeature]?.title || "Feature demonstration"}
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 600px"
-          className="h-full w-full rounded-sm object-contain transition-all duration-300 ease-in-out md:object-cover lg:object-contain"
+          className="h-full w-full rounded-sm object-contain transition-all duration-300 ease-in-out md:object-cover lg:object-contain animate-in fade-in slide-in-from-right-4 duration-700"
         />
       </div>
     </div>

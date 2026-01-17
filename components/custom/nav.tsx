@@ -17,7 +17,6 @@ import {
   Cog,
   Menu,
   Sparkles,
-  TabletSmartphone,
   User,
   UserCheck,
   UserCog,
@@ -39,6 +38,18 @@ import {
   ShieldCheck,
   MonitorSmartphone,
   Globe,
+  HousePlug,
+  SmartphoneCharging,
+  WrenchIcon,
+  FileCheck,
+  ListCheck,
+  Calendar,
+  LinkIcon,
+  Zap,
+  HardHat,
+  CardSim,
+  RefreshCcw,
+  PlugZap,
 } from "lucide-react";
 import {
   DropdownMenu,
@@ -248,9 +259,9 @@ function NavbarActiveMenu({ activeMenu, setActiveMenu }: NavbarCommonProps) {
   const pricing: NavbarCategories[] = t.raw("Pricing.categories");
 
   const solutionIcons = [
-    [TabletSmartphone, Activity, Sparkles, Cog, Clock],
-    [TabletSmartphone, Activity, Sparkles, Cog, Clock],
-    [TabletSmartphone, Activity, Sparkles, Cog, Clock],
+    [Activity, Sparkles, Cog, Clock, HousePlug],
+    [ListCheck, FileCheck, WrenchIcon, Calendar, LinkIcon],
+    [Zap, HardHat, CardSim, RefreshCcw, PlugZap],
   ];
 
   const whoWeServeIcons = [
@@ -288,7 +299,7 @@ function NavbarActiveMenu({ activeMenu, setActiveMenu }: NavbarCommonProps) {
       <div className="relative lg:px-2 shadow-lg">
         <div
           className={cn(
-            "fixed top-18.25 z-40 bg-white border-b border-slate-200 shadow-lg",
+            "fixed top-18.25 z-40 border-b border-slate-200 shadow-lg bg-slate-50",
             activeMenu && smallMenus.includes(activeMenu)
               ? "left-1/2 -translate-x-1/2 w-full max-w-242.5"
               : "left-0 right-0",
@@ -304,7 +315,7 @@ function NavbarActiveMenu({ activeMenu, setActiveMenu }: NavbarCommonProps) {
                   >
                     <div className="group/title flex items-center gap-2 cursor-pointer">
                       <div className="flex h-8 w-8 items-center justify-center rounded-xs border border-neutral-200 bg-white lg:bg-transparent">
-                        <Activity
+                        <SmartphoneCharging
                           className="text-[#94A3B8] size-5"
                           strokeWidth={1}
                         />
@@ -317,8 +328,7 @@ function NavbarActiveMenu({ activeMenu, setActiveMenu }: NavbarCommonProps) {
 
                     <div className="flex w-full flex-col gap-4 mt-2">
                       {category.items.map((item, itemIndex) => {
-                        const Icon =
-                          solutionIcons[index]?.[itemIndex] || TabletSmartphone;
+                        const Icon = solutionIcons[index]?.[itemIndex];
                         return (
                           <NavbarActiveMenuItem
                             key={itemIndex}
@@ -478,7 +488,7 @@ function NavbarActiveMenu({ activeMenu, setActiveMenu }: NavbarCommonProps) {
             {activeMenu === NavbarMenu.Pricing && (
               <div className="animate-in fade-in duration-300 flex w-full gap-4 lg:justify-between">
                 {pricing.map((item, index) => {
-                  const Icon = pricingIcons[index] || Activity;
+                  const Icon = pricingIcons[index];
                   return (
                     <div
                       key={index}

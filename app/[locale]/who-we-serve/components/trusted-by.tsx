@@ -37,22 +37,19 @@ export function TrustedBySection() {
   const t = useTranslations();
 
   return (
-    <section className="flex w-full flex-col items-center justify-center gap-y-12 border-y border-slate-100 bg-white py-8">
-      <p className="px-4 text-center font-medium text-slate-400">
+    <section className="flex w-full flex-col items-center justify-center gap-y-12 bg-white py-8">
+      <p className="mx-auto max-w-2xl px-4 text-center text-slate-500 text-body-md lg:px-0">
         {t("TrustedBy")}
       </p>
 
-      {/* Desktop grid */}
       <div className="hidden w-fit grid-cols-7 justify-items-center gap-12 md:grid">
         {logoComponents.map(({ id, component: LogoComponent }) => (
           <LogoComponent key={id} />
         ))}
       </div>
 
-      {/* Mobile carousel */}
       <div className="relative w-full overflow-hidden md:hidden">
         <div className="flex animate-scroll gap-12">
-          {/* Duplicate logos for seamless loop */}
           {logoComponents.map(({ id, component: LogoComponent }) => (
             <LogoComponent key={`${id}-1`} />
           ))}

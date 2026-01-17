@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { getCDNUrl } from "@/lib/config";
 
@@ -55,9 +55,40 @@ interface HowItWorksTabsProps {
 
 export function HowItWorksTabs({ items }: HowItWorksTabsProps) {
   const [activeTab, setActiveTab] = useState(1);
+  const [isVisible, setIsVisible] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsVisible(entry.isIntersecting);
+      },
+      { threshold: 0.3 },
+    );
+
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
+
+    return () => {
+      if (containerRef.current) {
+        observer.unobserve(containerRef.current);
+      }
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!isVisible) return;
+
+    const interval = setInterval(() => {
+      setActiveTab((prev) => (prev >= items.length ? 1 : prev + 1));
+    }, 8000);
+
+    return () => clearInterval(interval);
+  }, [items.length, isVisible]);
 
   return (
-    <div className="w-full">
+    <div className="w-full" ref={containerRef}>
       <div className="mx-auto flex w-full flex-col gap-8 lg:gap-12">
         <nav
           className="relative mx-auto flex w-full flex-col overflow-hidden rounded-lg bg-slate-100 sm:flex-row sm:rounded-none sm:bg-transparent"
@@ -99,8 +130,9 @@ export function HowItWorksTabs({ items }: HowItWorksTabsProps) {
           role="tabpanel"
           id={`tabpanel-${activeTab}`}
           aria-labelledby={`tab-${activeTab}`}
+          key={activeTab}
         >
-          <div className="flex w-full flex-col gap-4 lg:max-w-95.5">
+          <div className="flex w-full flex-col gap-4 lg:max-w-95.5 animate-in fade-in slide-in-from-bottom-4 duration-500">
             <h3 className="font-bold tracking-tight text-xl">
               {items[activeTab - 1]?.contentTitle}
             </h3>
@@ -118,7 +150,7 @@ export function HowItWorksTabs({ items }: HowItWorksTabsProps) {
             </ul>
           </div>
 
-          <div className="w-full lg:w-3/5">
+          <div className="w-full lg:w-3/5 animate-in fade-in slide-in-from-right-4 duration-700">
             <div className="relative aspect-16/10 w-full overflow-hidden rounded-xl shadow-xl">
               <Image
                 src={IMAGES[activeTab - 1] || ""}

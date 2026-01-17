@@ -22,11 +22,11 @@ function DesktopTestimonialCard() {
   return (
     <div className="absolute inset-0 mx-auto hidden w-full items-center justify-end lg:flex 2xl:right-8 2xl:mr-0">
       <aside
-        className="flex w-full max-w-60 flex-col gap-4 rounded-l-sm bg-white px-4 py-4 lg:py-6 2xl:max-w-70 2xl:rounded-sm 2xl:px-5 3xl:max-w-80 3xl:px-6 3xl:py-7 4xl:max-w-[335px]"
+        className="flex w-full max-w-60 flex-col gap-4 rounded-l-sm bg-white px-4 py-4 lg:py-6 2xl:max-w-70 2xl:rounded-xs 2xl:px-5 3xl:max-w-80 3xl:px-6 3xl:py-7 4xl:max-w-[335px]"
         aria-label="Customer testimonial"
       >
         <p className="text-slate-500 text-body-sm 2xl:text-body-md 4xl:text-body-lg">
-          {t("quote")}
+          &quot;{t("quote")}&quot;
         </p>
         <article className="flex w-full flex-col">
           <p className="font-bold text-[13px] 2xl:text-body-sm 4xl:text-body-md">
@@ -49,7 +49,6 @@ export function HeroSection() {
 
   return (
     <section className="relative w-full">
-      {/* Background image for desktop */}
       <div className="absolute inset-0 -z-10 hidden md:block">
         <Image
           src={DESKTOP_BG_IMAGE}
@@ -61,7 +60,6 @@ export function HeroSection() {
         />
       </div>
 
-      {/* Content container - full blue on mobile, 50% overlay on desktop */}
       <div className="relative z-10 flex w-full max-w-full bg-blue-950 px-4 pb-12 pt-14 md:max-w-[50%] md:items-center md:bg-blue-950/80 md:pr-0 lg:py-16 xl:py-20 xl:pl-16 3xl:min-h-[675px] 4xl:min-h-[695px]">
         <div className="flex w-full max-w-xl flex-col items-center gap-8 md:ml-auto md:w-fit md:items-start pr-2">
           <article className="relative z-20 flex w-full flex-col items-center gap-4 md:items-start">
@@ -82,7 +80,6 @@ export function HeroSection() {
         </div>
       </div>
 
-      {/* Tablet image - only visible between sm and md */}
       <figure className="hidden h-72.5 w-full max-sm:hidden sm:flex md:hidden">
         <Image
           src={TABLET_IMAGE}
@@ -95,7 +92,6 @@ export function HeroSection() {
         />
       </figure>
 
-      {/* Mobile image - only visible on mobile */}
       <figure className="flex h-72.5 w-full sm:hidden">
         <Image
           src={MOBILE_IMAGE}
@@ -108,7 +104,6 @@ export function HeroSection() {
         />
       </figure>
 
-      {/* Desktop testimonial card - only visible on desktop */}
       <DesktopTestimonialCard />
     </section>
   );

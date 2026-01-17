@@ -40,6 +40,17 @@ import {
   Globe,
   ArrowRight,
   X,
+  HousePlug,
+  ListCheck,
+  FileCheck,
+  WrenchIcon,
+  Calendar,
+  LinkIcon,
+  Zap,
+  HardHat,
+  CardSim,
+  RefreshCcw,
+  PlugZap,
 } from "lucide-react";
 import Image from "next/image";
 import { BrazilFlag } from "../icons/brazil-flag";
@@ -80,9 +91,9 @@ export function MobileMenu({
   const pricing = t.raw("Pricing.categories");
 
   const solutionIcons = [
-    [TabletSmartphone, Activity, Sparkles, Cog, Clock],
-    [TabletSmartphone, Activity, Sparkles, Cog, Clock],
-    [TabletSmartphone, Activity, Sparkles, Cog, Clock],
+    [Activity, Sparkles, Cog, Clock, HousePlug],
+    [ListCheck, FileCheck, WrenchIcon, Calendar, LinkIcon],
+    [Zap, HardHat, CardSim, RefreshCcw, PlugZap],
   ];
 
   const whoWeServeIcons = [
