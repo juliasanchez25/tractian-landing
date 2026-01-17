@@ -1,10 +1,12 @@
 "use client";
 
+import * as React from "react";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { getS3Url } from "@/lib/config";
+import { RequestDemoModal } from "@/components/custom/request-demo-modal";
 
 const DESKTOP_BG_IMAGE = getS3Url(
   "/website/pages/who-we-serve/plant-manager/pt/header-image.png",
@@ -38,6 +40,7 @@ function DesktopTestimonialCard() {
 
 export function HeroSection() {
   const t = useTranslations("Hero");
+  const [isRequestDemoOpen, setIsRequestDemoOpen] = React.useState(false);
 
   return (
     <section className="relative w-full">
@@ -65,7 +68,7 @@ export function HeroSection() {
               {t("description")}
             </p>
           </article>
-          <Button>
+          <Button onClick={() => setIsRequestDemoOpen(true)}>
             {t("button")}
             <ArrowRight className="h-4 w-4" />
           </Button>
@@ -97,6 +100,10 @@ export function HeroSection() {
       </figure>
 
       <DesktopTestimonialCard />
+      <RequestDemoModal
+        open={isRequestDemoOpen}
+        onOpenChange={setIsRequestDemoOpen}
+      />
     </section>
   );
 }
