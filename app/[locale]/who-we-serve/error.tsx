@@ -17,7 +17,7 @@ export default function Error({
       <p className="text-slate-500">{error.message}</p>
       <button
         onClick={reset}
-        className="rounded-sm bg-blue-600 px-4 py-2 text-white transition-colors hover:bg-blue-700"
+        className="rounded-sm bg-primary px-4 py-2 text-white transition-colors hover:bg-blue-700"
       >
         {t("button")}
       </button>

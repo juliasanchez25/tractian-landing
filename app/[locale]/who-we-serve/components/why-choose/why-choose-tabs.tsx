@@ -83,7 +83,7 @@ export function WhyChooseTabs({ items }: WhyChooseTabsProps) {
       ref={containerRef}
     >
       <nav
-        className="flex h-79 w-full flex-col gap-4 border-l-2 border-slate-300 xs:h-auto lg:gap-6"
+        className="flex w-full flex-col gap-4 border-l-2 border-slate-300 lg:gap-6 lg:h-79"
         aria-label="Features"
       >
         {items.map((item, index) => (
@@ -91,14 +91,14 @@ export function WhyChooseTabs({ items }: WhyChooseTabsProps) {
             key={item.title}
             onClick={() => setActiveFeature(index)}
             aria-pressed={activeFeature === index}
-            className={`group -ml-0.5 h-full w-full border-l-2 bg-transparent px-4 transition-all duration-300 ${
+            className={`group -ml-0.5 w-full border-l-2 bg-transparent px-4 transition-all duration-300 ${
               activeFeature === index ? "border-blue-500" : "border-transparent"
             }`}
           >
             <div className="mb-2 flex w-full items-center gap-3 transition-all duration-500 lg:justify-between">
               <figure
                 className={`flex h-6 w-6 items-center justify-center transition-all duration-300 ease-in-out ${
-                  activeFeature === index ? "bg-blue-600" : "bg-slate-400"
+                  activeFeature === index ? "bg-primary" : "bg-slate-400"
                 }`}
                 aria-hidden="true"
               >
@@ -115,7 +115,7 @@ export function WhyChooseTabs({ items }: WhyChooseTabsProps) {
             <div
               className={`overflow-hidden transition-all duration-500 ease-in-out ${
                 activeFeature === index
-                  ? "max-h-32 opacity-100"
+                  ? "max-h-60 opacity-100 md:max-h-32"
                   : "max-h-0 opacity-0"
               }`}
             >
@@ -128,7 +128,7 @@ export function WhyChooseTabs({ items }: WhyChooseTabsProps) {
       </nav>
 
       <div
-        className="relative flex h-full w-full justify-center rounded-sm lg:h-80"
+        className="relative w-full justify-center rounded-sm mt-4 h-64 md:h-72 lg:mt-0 lg:h-80 lg:flex"
         key={activeFeature}
       >
         <Image
@@ -136,7 +136,7 @@ export function WhyChooseTabs({ items }: WhyChooseTabsProps) {
           alt={items[activeFeature]?.title || "Feature demonstration"}
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 600px"
-          className="h-full w-full rounded-sm object-contain transition-all duration-300 ease-in-out md:object-cover lg:object-contain animate-in fade-in slide-in-from-right-4 duration-700"
+          className="h-full w-full rounded-sm object-contain transition-all ease-in-out md:object-cover lg:object-contain animate-in fade-in slide-in-from-right-4 duration-700"
         />
       </div>
     </div>

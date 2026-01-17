@@ -91,7 +91,7 @@ export function HowItWorksTabs({ items }: HowItWorksTabsProps) {
     <div className="w-full" ref={containerRef}>
       <div className="mx-auto flex w-full flex-col gap-8 lg:gap-12">
         <nav
-          className="relative mx-auto flex w-full flex-col overflow-hidden rounded-lg bg-slate-100 sm:flex-row sm:rounded-none sm:bg-transparent"
+          className="relative mx-auto flex w-full flex-col overflow-hidden rounded-lg border-b border-slate-200 bg-slate-100 sm:flex-row sm:rounded-none sm:bg-transparent"
           aria-label="How it works tabs"
           role="tablist"
         >
@@ -103,7 +103,7 @@ export function HowItWorksTabs({ items }: HowItWorksTabsProps) {
                 className={`relative flex w-full items-center justify-center border-b px-1 py-1 transition-all duration-300 sm:px-0 sm:py-0 ${
                   activeTab === id
                     ? "bg-slate-100 sm:border-b-2 sm:border-b-blue-600 sm:bg-transparent"
-                    : "border-transparent sm:border-b sm:border-b-slate-300 sm:bg-transparent"
+                    : "border-transparent sm:bg-transparent"
                 }`}
               >
                 <button

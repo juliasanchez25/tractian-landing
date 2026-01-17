@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
-import { WhyChooseSection } from "./components/why-choose";
+import { WhyChooseSection } from "./components/why-choose/why-choose";
 import { HeroSection } from "./components/hero";
-import { HowItWorksSection } from "./components/how-it-works";
+import { HowItWorksSection } from "./components/how-it-works/how-it-works";
 import { TestimonialsSection } from "./components/testimonials";
 import { StepsSection } from "./components/steps";
 import { CtaSection } from "./components/cta";
 import { FaqSection } from "./components/faq";
 import { YouControlSection } from "./components/you-control";
 import { TrustedBySection } from "./components/trusted-by";
-import { Footer } from "./components/footer";
+import { Footer } from "../../../components/custom/footer";
 import { SITE_URL } from "@/lib/config";
 
 export async function generateStaticParams() {

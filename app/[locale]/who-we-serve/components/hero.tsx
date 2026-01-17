@@ -25,19 +25,11 @@ function DesktopTestimonialCard() {
         className="flex w-full max-w-60 flex-col gap-4 rounded-l-sm bg-white px-4 py-4 lg:py-6 2xl:max-w-70 2xl:rounded-xs 2xl:px-5 3xl:max-w-80 3xl:px-6 3xl:py-7 4xl:max-w-[335px]"
         aria-label="Customer testimonial"
       >
-        <p className="text-slate-500 text-body-sm 2xl:text-body-md 4xl:text-body-lg">
-          &quot;{t("quote")}&quot;
-        </p>
-        <article className="flex w-full flex-col">
-          <p className="font-bold text-[13px] 2xl:text-body-sm 4xl:text-body-md">
-            {t("name")}
-          </p>
-          <p className="text-[13px] 2xl:text-body-sm 4xl:text-body-md">
-            {t("role")}
-          </p>
-          <p className="font-bold text-[13px] 2xl:text-body-sm 4xl:text-body-md">
-            {t("company")}
-          </p>
+        <p className="text-slate-500">&quot;{t("quote")}&quot;</p>
+        <article className="flex w-full flex-col space-y-1">
+          <p className="font-bold text-sm">{t("name")}</p>
+          <p className="text-sm">{t("role")}</p>
+          <p className="font-bold text-sm">{t("company")}</p>
         </article>
       </aside>
     </div>
@@ -52,11 +44,11 @@ export function HeroSection() {
       <div className="absolute inset-0 -z-10 hidden md:block">
         <Image
           src={DESKTOP_BG_IMAGE}
-          alt=""
+          alt="Background image of industrial worker"
           fill
           priority
           sizes="100vw"
-          className="object-cover object-right"
+          className="object-cover object-top-right"
         />
       </div>
 
@@ -66,15 +58,15 @@ export function HeroSection() {
             <span className="text-balance text-center font-light uppercase tracking-wider text-white text-xs md:text-base">
               {t("subtitle")}
             </span>
-            <h1 className="text-balance text-center font-bold text-white text-[28px] leading-tight md:text-left md:text-4xl lg:text-[40px]">
+            <h1 className="text-balance text-center font-bold text-white text-[28px] leading-tight tracking-tight md:text-left md:text-4xl lg:text-[40px]">
               {t("title")}
             </h1>
             <p className="max-w-lg text-center font-light text-white text-sm md:text-left md:text-base">
               {t("description")}
             </p>
           </article>
-          <Button className="mx-auto flex items-center justify-center gap-2 rounded-sm bg-blue-600 px-6 py-3 font-medium text-white hover:bg-blue-900 active:bg-blue-950 md:mx-0">
-            <span>{t("button")}</span>
+          <Button>
+            {t("button")}
             <ArrowRight className="h-4 w-4" />
           </Button>
         </div>

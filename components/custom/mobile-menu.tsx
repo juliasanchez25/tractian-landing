@@ -56,6 +56,21 @@ import Image from "next/image";
 import { BrazilFlag } from "../icons/brazil-flag";
 import { USAFlag } from "../icons/usa-flag";
 import { ESFlag } from "../icons/es-flag";
+import type { LucideIcon } from "lucide-react";
+
+interface CategoryItem {
+  title: string;
+  subtitle?: string;
+}
+
+interface Category {
+  title: string;
+  items: CategoryItem[];
+}
+
+interface PricingItem {
+  title: string;
+}
 
 interface MobileMenuProps {
   open: boolean;
@@ -84,36 +99,36 @@ export function MobileMenu({
 
   const currentLanguage = languageOptions.find((lang) => lang.code === locale);
 
-  const solutions = t.raw("Solutions.categories");
-  const whoWeServe = t.raw("WhoWeServe.categories");
-  const resources = t.raw("Resources.categories");
-  const company = t.raw("Company.categories");
-  const pricing = t.raw("Pricing.categories");
+  const solutions = t.raw("Solutions.categories") as Category[];
+  const whoWeServe = t.raw("WhoWeServe.categories") as Category[];
+  const resources = t.raw("Resources.categories") as Category[];
+  const company = t.raw("Company.categories") as Category[];
+  const pricing = t.raw("Pricing.categories") as PricingItem[];
 
-  const solutionIcons = [
+  const solutionIcons: LucideIcon[][] = [
     [Activity, Sparkles, Cog, Clock, HousePlug],
     [ListCheck, FileCheck, WrenchIcon, Calendar, LinkIcon],
     [Zap, HardHat, CardSim, RefreshCcw, PlugZap],
   ];
 
-  const whoWeServeIcons = [
+  const whoWeServeIcons: LucideIcon[][] = [
     [User, UserCheck, UserCog],
     [Car, Truck, FlaskConical, Sprout, Utensils, FileText],
   ];
 
-  const resourcesIcons = [
+  const resourcesIcons: LucideIcon[][] = [
     [Building2, BookOpen, LayoutTemplate, FileText, Wrench, Sparkles],
     [Megaphone, GraduationCap, CircleHelp],
   ];
 
-  const companyImages = [
+  const companyImages: string[] = [
     "https://imgix.tractian.com/website/components/navbar/general/about.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=3840",
     "https://imgix.tractian.com/website/components/navbar/general/careers.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=3840",
     "https://imgix.tractian.com/website/components/navbar/general/newsroom.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=3840",
   ];
 
-  const companyIcons = [MessageSquare, Users, ShieldCheck];
-  const pricingIcons = [Activity, MonitorSmartphone];
+  const companyIcons: LucideIcon[] = [MessageSquare, Users, ShieldCheck];
+  const pricingIcons: LucideIcon[] = [Activity, MonitorSmartphone];
 
   return (
     <Sheet open={open} onOpenChange={onOpenChange}>
@@ -145,7 +160,7 @@ export function MobileMenu({
               <AccordionContent className="space-y-6 bg-slate-100 relative flex flex-col px-4 py-4">
                 <div className="flex flex-col gap-y-2 pb-4">
                   <div className="flex w-full flex-col gap-8">
-                    {solutions.map((category: any, categoryIndex: number) => (
+                    {solutions.map((category, categoryIndex) => (
                       <div
                         key={categoryIndex}
                         className="flex w-full flex-col gap-4"
@@ -160,53 +175,51 @@ export function MobileMenu({
                               strokeWidth={1.5}
                             />
                           </div>
-                          <div className="text-slate-500 transition-all duration-150 group-hover:text-blue-600 group-active:text-blue-600 text-sm font-normal flex items-center gap-1">
+                          <div className="text-slate-500 transition-all duration-150 group-hover:text-primary group-active:text-primary text-sm font-normal flex items-center gap-1">
                             <h4>
                               {category.title}
                               <ArrowRight
-                                className="hidden group-active:inline-block w-4 h-4 text-blue-600"
+                                className="hidden group-active:inline-block w-4 h-4 text-primary"
                                 strokeWidth={1.5}
                               />
                             </h4>
                           </div>
                         </Link>
                         <div className="flex w-full flex-col gap-3 ml-4">
-                          {category.items.map(
-                            (item: any, itemIndex: number) => {
-                              const Icon =
-                                solutionIcons[categoryIndex]?.[itemIndex] ||
-                                TabletSmartphone;
-                              return (
-                                <Link
-                                  key={itemIndex}
-                                  href="/who-we-serve"
-                                  className="group flex items-start gap-3 hover:bg-slate-50 transition-colors"
-                                  onClick={() => onOpenChange(false)}
-                                >
-                                  <div className="flex h-8 w-8 items-center justify-center rounded-xs border border-neutral-200 bg-white">
-                                    <Icon
-                                      className="w-5 h-5 text-slate-400"
+                          {category.items.map((item, itemIndex) => {
+                            const Icon =
+                              solutionIcons[categoryIndex]?.[itemIndex] ||
+                              TabletSmartphone;
+                            return (
+                              <Link
+                                key={itemIndex}
+                                href="/who-we-serve"
+                                className="group flex items-start gap-3 hover:bg-slate-50 transition-colors"
+                                onClick={() => onOpenChange(false)}
+                              >
+                                <div className="flex h-8 w-8 items-center justify-center rounded-xs border border-neutral-200 bg-white">
+                                  <Icon
+                                    className="w-5 h-5 text-slate-400"
+                                    strokeWidth={1.5}
+                                  />
+                                </div>
+                                <div className="flex-1 min-w-0">
+                                  <div className="text-slate-500 transition-all duration-150 group-hover:text-primary group-active:text-primary text-body-sm flex items-center gap-1">
+                                    {item.title}
+                                    <ArrowRight
+                                      className="hidden group-active:inline-block w-4 h-4 text-primary"
                                       strokeWidth={1.5}
                                     />
                                   </div>
-                                  <div className="flex-1 min-w-0">
-                                    <div className="text-slate-500 transition-all duration-150 group-hover:text-blue-600 group-active:text-blue-600 text-body-sm flex items-center gap-1">
-                                      {item.title}
-                                      <ArrowRight
-                                        className="hidden group-active:inline-block w-4 h-4 text-blue-600"
-                                        strokeWidth={1.5}
-                                      />
+                                  {item.subtitle && (
+                                    <div className="text-slate-500 text-xs pr-1">
+                                      {item.subtitle}
                                     </div>
-                                    {item.subtitle && (
-                                      <div className="text-slate-500 text-xs pr-1">
-                                        {item.subtitle}
-                                      </div>
-                                    )}
-                                  </div>
-                                </Link>
-                              );
-                            },
-                          )}
+                                  )}
+                                </div>
+                              </Link>
+                            );
+                          })}
                         </div>
                       </div>
                     ))}
@@ -223,7 +236,7 @@ export function MobileMenu({
               </AccordionTrigger>
               <AccordionContent className="bg-slate-100 relative flex flex-col px-4 py-4">
                 <div className="flex w-full flex-col gap-8 pb-4">
-                  {whoWeServe.map((category: any, categoryIndex: number) => (
+                  {whoWeServe.map((category, categoryIndex) => (
                     <div
                       key={categoryIndex}
                       className="flex w-full flex-col gap-4"
@@ -232,7 +245,7 @@ export function MobileMenu({
                         {category.title}
                       </h4>
                       <div className="flex w-full flex-col gap-4">
-                        {category.items.map((item: any, itemIndex: number) => {
+                        {category.items.map((item, itemIndex) => {
                           const Icon =
                             whoWeServeIcons[categoryIndex]?.[itemIndex] || User;
                           return (
@@ -248,10 +261,10 @@ export function MobileMenu({
                                   strokeWidth={1.5}
                                 />
                               </div>
-                              <div className="text-slate-500 transition-all duration-150 group-hover:text-blue-600 group-active:text-blue-600 text-body-sm flex items-center gap-1">
+                              <div className="text-slate-500 transition-all duration-150 group-hover:text-primary group-active:text-primary text-body-sm flex items-center gap-1">
                                 {item.title}
                                 <ArrowRight
-                                  className="hidden group-active:inline-block w-4 h-4 text-blue-600"
+                                  className="hidden group-active:inline-block w-4 h-4 text-primary"
                                   strokeWidth={1.5}
                                 />
                               </div>
@@ -273,7 +286,7 @@ export function MobileMenu({
               </AccordionTrigger>
               <AccordionContent className="bg-slate-100 relative flex flex-col px-4 py-4">
                 <div className="flex w-full flex-col gap-8 pb-4">
-                  {resources.map((category: any, categoryIndex: number) => (
+                  {resources.map((category, categoryIndex) => (
                     <div
                       key={categoryIndex}
                       className="flex w-full flex-col gap-4"
@@ -282,7 +295,7 @@ export function MobileMenu({
                         {category.title}
                       </h4>
                       <div className="flex w-full flex-col gap-4">
-                        {category.items.map((item: any, itemIndex: number) => {
+                        {category.items.map((item, itemIndex) => {
                           const Icon =
                             resourcesIcons[categoryIndex]?.[itemIndex] ||
                             FileText;
@@ -299,10 +312,10 @@ export function MobileMenu({
                                   strokeWidth={1.5}
                                 />
                               </div>
-                              <div className="text-slate-500 transition-all duration-150 group-hover:text-blue-600 group-active:text-blue-600 text-body-sm flex items-center gap-1">
+                              <div className="text-slate-500 transition-all duration-150 group-hover:text-primary group-active:text-primary text-body-sm flex items-center gap-1">
                                 {item.title}
                                 <ArrowRight
-                                  className="hidden group-active:inline-block w-4 h-4 text-blue-600"
+                                  className="hidden group-active:inline-block w-4 h-4 text-primary"
                                   strokeWidth={1.5}
                                 />
                               </div>
@@ -324,7 +337,7 @@ export function MobileMenu({
               </AccordionTrigger>
               <AccordionContent className="bg-slate-100 relative flex flex-col px-4 py-4">
                 <div className="flex flex-col gap-8 pb-4">
-                  {company.map((category: any, categoryIndex: number) => (
+                  {company.map((category, categoryIndex) => (
                     <div
                       key={categoryIndex}
                       className="flex w-full flex-col gap-4"
@@ -333,7 +346,7 @@ export function MobileMenu({
                         {category.title}
                       </h4>
                       <div className="space-y-4">
-                        {category.items.map((item: any, itemIndex: number) => {
+                        {category.items.map((item, itemIndex) => {
                           if (categoryIndex === 0) {
                             const imageSrc = companyImages[itemIndex];
                             return (
@@ -352,10 +365,10 @@ export function MobileMenu({
                                     className="h-22.5 w-40 rounded-xs"
                                   />
                                 </div>
-                                <div className="text-slate-500 text-body-sm flex items-center gap-1 group-active:text-blue-600 group-hover:text-blue-600">
+                                <div className="text-slate-500 text-body-sm flex items-center gap-1 group-active:text-primary group-hover:text-primary">
                                   {item.title}
                                   <ArrowRight
-                                    className="hidden group-active:inline-block w-4 h-4 text-blue-600"
+                                    className="hidden group-active:inline-block w-4 h-4 text-primary"
                                     strokeWidth={1.5}
                                   />
                                 </div>
@@ -376,10 +389,10 @@ export function MobileMenu({
                                   strokeWidth={1.5}
                                 />
                               </div>
-                              <div className="text-slate-500 transition-all duration-150 group-hover:text-blue-600 group-active:text-blue-600text-body-sm flex items-center gap-1">
+                              <div className="text-slate-500 transition-all duration-150 group-hover:text-primary group-active:text-primarytext-body-sm flex items-center gap-1">
                                 {item.title}
                                 <ArrowRight
-                                  className="hidden group-active:inline-block w-4 h-4 text-blue-600"
+                                  className="hidden group-active:inline-block w-4 h-4 text-primary"
                                   strokeWidth={1.5}
                                 />
                               </div>
@@ -401,7 +414,7 @@ export function MobileMenu({
               </AccordionTrigger>
               <AccordionContent className="bg-slate-100 relative flex flex-col px-4 py-4">
                 <div className="flex flex-col gap-y-4 pb-4">
-                  {pricing.map((item: any, index: number) => {
+                  {pricing.map((item, index) => {
                     const Icon = pricingIcons[index] || Activity;
                     return (
                       <Link
@@ -416,10 +429,10 @@ export function MobileMenu({
                             strokeWidth={1.5}
                           />
                         </div>
-                        <div className="text-slate-500 transition-all duration-150 group-hover:text-blue-600 group-active:text-blue-600 text-body-sm flex items-center gap-1">
+                        <div className="text-slate-500 transition-all duration-150 group-hover:text-primary group-active:text-primary text-body-sm flex items-center gap-1">
                           {item.title}
                           <ArrowRight
-                            className="hidden group-active:inline-block w-4 h-4 text-blue-600"
+                            className="hidden group-active:inline-block w-4 h-4 text-primary"
                             strokeWidth={1.5}
                           />
                         </div>
@@ -431,7 +444,7 @@ export function MobileMenu({
             </AccordionItem>
 
             <AccordionItem value="translation" className="border-none">
-              <AccordionTrigger className="group flex w-full items-center justify-between px-4 py-3 hover:brightness-125 data-[state=open]:text-blue-600!">
+              <AccordionTrigger className="group flex w-full items-center justify-between px-4 py-3 hover:brightness-125 data-[state=open]:text-primary!">
                 <div className="flex items-center gap-4 mt-2">
                   <Globe className="h-5 w-5" />
                   <span>{currentLanguage?.label}</span>
