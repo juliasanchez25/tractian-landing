@@ -1,10 +1,9 @@
-import { redirect } from "../../i18n/navigation";
+import WhoWeServePage from "./who-we-serve/page";
 
 export default async function HomePage({
   params,
 }: {
   params: Promise<{ locale: string }>;
 }) {
-  const { locale } = await params;
-  redirect({ href: "/who-we-serve", locale });
+  return <WhoWeServePage params={params} />;
 }

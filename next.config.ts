@@ -4,12 +4,47 @@ import createNextIntlPlugin from "next-intl/plugin";
 const withNextIntl = createNextIntlPlugin();
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  async headers() {
+    return [
+      {
+        source: "/:path*",
+        headers: [
+          {
+            key: "X-Frame-Options",
+            value: "DENY",
+          },
+          {
+            key: "X-Content-Type-Options",
+            value: "nosniff",
+          },
+          {
+            key: "Referrer-Policy",
+            value: "strict-origin-when-cross-origin",
+          },
+          {
+            key: "X-XSS-Protection",
+            value: "1; mode=block",
+          },
+          {
+            key: "Permissions-Policy",
+            value: "camera=(), microphone=(), geolocation=()",
+          },
+        ],
+      },
+    ];
+  },
   images: {
     remotePatterns: [
-      { hostname: "imgix.tractian.com" },
-      { hostname: "tractian-webpage.s3.us-east-1.amazonaws.com" },
+      {
+        protocol: "https",
+        hostname: "imgix.tractian.com",
+      },
+      {
+        protocol: "https",
+        hostname: "tractian-webpage.s3.us-east-1.amazonaws.com",
+      },
     ],
+    formats: ["image/avif", "image/webp"],
   },
 };
 

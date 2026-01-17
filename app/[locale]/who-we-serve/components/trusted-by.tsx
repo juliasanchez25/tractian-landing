@@ -16,63 +16,51 @@ import { VoestalpineIcon } from "@/components/icons/trusted-by/voestalpine";
 import { WeyerhaeuserIcon } from "@/components/icons/trusted-by/weyerhaeuser";
 import { useTranslations } from "next-intl";
 
+const logoComponents = [
+  { id: "weyerhaeuser", component: WeyerhaeuserIcon },
+  { id: "berry", component: BerryIcon },
+  { id: "in-n-out", component: InNOutIcon },
+  { id: "cargill", component: CargillIcon },
+  { id: "carrier", component: CarrierIcon },
+  { id: "kraft-heinz", component: KraftHeinzIcon },
+  { id: "one-subsea", component: OneSubseaIcon },
+  { id: "hyundai", component: HyundaiIcon },
+  { id: "quaker", component: QuakerIcon },
+  { id: "tate-lyle", component: TateLyleIcon },
+  { id: "cat", component: CatIcon },
+  { id: "voestalpine", component: VoestalpineIcon },
+  { id: "owens", component: OwensIcon },
+  { id: "ldc", component: LdcIcon },
+];
+
 export function TrustedBySection() {
   const t = useTranslations();
 
-  const logos = [
-    <WeyerhaeuserIcon key="weyerhaeuser" />,
-    <BerryIcon key="berry" />,
-    <InNOutIcon key="in-n-out" />,
-    <CargillIcon key="cargill" />,
-    <CarrierIcon key="carrier" />,
-    <KraftHeinzIcon key="kraft-heinz" />,
-    <OneSubseaIcon key="one-subsea" />,
-    <HyundaiIcon key="hyundai" />,
-    <QuakerIcon key="quaker" />,
-    <TateLyleIcon key="tate-lyle" />,
-    <CatIcon key="cat" />,
-    <VoestalpineIcon key="voestalpine" />,
-    <OwensIcon key="owens" />,
-    <LdcIcon key="ldc" />,
-  ];
-
   return (
-    <div className="w-full items-center justify-center bg-white py-8 border-y border-slate-100 flex flex-col gap-y-12">
-      <p className="text-slate-400 font-medium text-center px-4">
+    <section className="flex w-full flex-col items-center justify-center gap-y-12 border-y border-slate-100 bg-white py-8">
+      <p className="px-4 text-center font-medium text-slate-400">
         {t("TrustedBy")}
       </p>
 
       {/* Desktop grid */}
-      <div className="hidden md:grid w-fit grid-cols-7 gap-12 justify-items-center">
-        {logos}
+      <div className="hidden w-fit grid-cols-7 justify-items-center gap-12 md:grid">
+        {logoComponents.map(({ id, component: LogoComponent }) => (
+          <LogoComponent key={id} />
+        ))}
       </div>
 
       {/* Mobile carousel */}
-      <div className="md:hidden w-full overflow-hidden relative">
+      <div className="relative w-full overflow-hidden md:hidden">
         <div className="flex animate-scroll gap-12">
           {/* Duplicate logos for seamless loop */}
-          {logos}
-          {logos}
+          {logoComponents.map(({ id, component: LogoComponent }) => (
+            <LogoComponent key={`${id}-1`} />
+          ))}
+          {logoComponents.map(({ id, component: LogoComponent }) => (
+            <LogoComponent key={`${id}-2`} />
+          ))}
         </div>
       </div>
-
-      <style jsx>{`
-        @keyframes scroll {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(-50%);
-          }
-        }
-        .animate-scroll {
-          animation: scroll 50s linear infinite;
-          width: fit-content;
-        }
-        .animate-scroll:hover {
-          animation-play-state: paused;
-        }
-      `}</style>
-    </div>
+    </section>
   );
 }

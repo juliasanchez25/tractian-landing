@@ -167,17 +167,29 @@
         }
       ]
     },
-    "Demo": "Get Demo"
+    "Demo": "Get Demo",
+    "Login": "Login",
+    "Menu": "Menu"
   },
   "Meta": {
     "title": "For the Plant Manager Who Wants to Lead with Confidence",
     "description": "Make smarter decisions, faster. Tractian gives you clarity, control, and confidence - so you can lead the plant and prove the ROI."
+  },
+  "ErrorPage": {
+    "title": "Something went wrong!",
+    "button": "Try again"
   },
   "Hero": {
     "subtitle": "Keep operations running. Hit your targets.",
     "title": "For the Plant Manager\nWho Wants to Lead with\nConfidence",
     "description": "Make smarter decisions, faster. Tractian gives you clarity, control, and confidence — so you can lead the plant and prove the ROI.",
     "button": "Get a Demo"
+  },
+  "HeroTestimonial": {
+    "quote": "With everything centralized within Tractian platform, we finally have the visibility to act fast, plan smarter, and show real results.",
+    "name": "Jari S.",
+    "role": "Industrial Director",
+    "company": "UISA"
   },
   "WhyChoose": {
     "subtitle": "Why Plant Managers Choose Tractian",

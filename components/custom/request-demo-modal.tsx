@@ -104,9 +104,9 @@ export function RequestDemoModal({
   };
 
   const onSubmit = (data: RequestDemoFormData) => {
-    const successMessage = `Form Data:\n\nName: ${data.name}\nEmail: ${data.workEmail}\nPhone: ${data.phoneCode} ${data.phoneNumber}\nJob Title: ${data.jobTitle}\nIndustry Sector: ${data.industrySector}\nSolution: ${data.solution}`;
-
-    alert(successMessage);
+    // Form submission logic - you can add API call here
+    // For now, just close the modal and reset
+    console.log("Form Data:", data);
     reset();
     setSelectedPhoneCode("");
     setSelectedJobTitle("");

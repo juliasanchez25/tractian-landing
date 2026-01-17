@@ -7,6 +7,7 @@ import { cn } from "@/lib/utils";
 import { Logo } from "../icons/logo";
 import { Button } from "../ui/button";
 import { RequestDemoModal } from "./request-demo-modal";
+import { MobileMenu } from "./mobile-menu";
 import Image from "next/image";
 import {
   Activity,
@@ -58,14 +59,16 @@ import {
 export function NavRoot() {
   const [activeMenu, setActiveMenu] = React.useState<NavbarMenu | null>(null);
   const [requestDemoOpen, setRequestDemoOpen] = React.useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
 
   return (
     <>
-      <header className="sticky top-0 z-40 flex w-full flex-col items-center justify-center transition-colors duration-default ease-in-out bg-slate-100 border-b border-slate-200">
+      <header className="sticky top-0 z-40 flex w-full flex-col items-center justify-center border-b border-slate-200 bg-slate-100 transition-colors duration-default ease-in-out">
         <Navbar
           activeMenu={activeMenu}
           setActiveMenu={setActiveMenu}
           onRequestDemoClick={() => setRequestDemoOpen(true)}
+          onMobileMenuClick={() => setMobileMenuOpen(true)}
         />
         {activeMenu && (
           <NavbarActiveMenu
@@ -78,6 +81,11 @@ export function NavRoot() {
         open={requestDemoOpen}
         onOpenChange={setRequestDemoOpen}
       />
+      <MobileMenu
+        open={mobileMenuOpen}
+        onOpenChange={setMobileMenuOpen}
+        onRequestDemoClick={() => setRequestDemoOpen(true)}
+      />
     </>
   );
 }
@@ -86,7 +94,8 @@ function Navbar({
   activeMenu,
   setActiveMenu,
   onRequestDemoClick,
-}: NavbarCommonProps) {
+  onMobileMenuClick,
+}: NavbarCommonProps & { onMobileMenuClick?: () => void }) {
   const t = useTranslations("Navbar");
 
   const locale = useLocale();
@@ -102,11 +111,14 @@ function Navbar({
   ) as NavbarLanguageOptions;
 
   return (
-    <div className="flex w-full max-w-screen-2xl items-center justify-between px-4 py-2 lg:px-8 lg:py-0">
+    <nav
+      className="flex w-full max-w-screen-2xl items-center justify-between px-4 py-2 lg:px-8 lg:py-0"
+      aria-label="Main navigation"
+    >
       <div className="hidden h-full w-full items-center justify-between lg:flex">
         <div className="flex items-center gap-x-3">
           <Logo />
-          <div className="flex items-center h-18 pl-2">
+          <div className="flex h-18 items-center pl-2">
             {menuOptions.map((menu) => (
               <NavbarMenuItem
                 key={menu}
@@ -120,16 +132,19 @@ function Navbar({
         <div className="flex items-center gap-8 lg:gap-4 xl:gap-8">
           <div className="relative inline-flex w-full flex-col py-4 lg:w-auto lg:max-w-none lg:flex-row lg:px-0 lg:py-2">
             <DropdownMenu>
-              <DropdownMenuTrigger className="flex items-center">
+              <DropdownMenuTrigger
+                className="flex items-center"
+                aria-label="Select language"
+              >
                 <Globe className="size-5 text-accent-foreground" />
                 <ChevronDown
-                  className="size-5 ml-1 text-accent-foreground"
+                  className="ml-1 size-5 text-accent-foreground"
                   strokeWidth={1}
                 />
               </DropdownMenuTrigger>
               <DropdownMenuContent
                 align="start"
-                className="rounded-none p-2 border-2 border-slate-300 bg-slate-50 text-slate-500 text-sm lg:left-3 lg:top-8 lg:w-auto lg:border-2 xl:text-md"
+                className="rounded-none border-2 border-slate-300 bg-slate-50 p-2 text-slate-500 text-sm lg:left-3 lg:top-8 lg:w-auto lg:border-2 xl:text-md"
               >
                 {languageOptions.map((language) => (
                   <DropdownMenuItem asChild key={language}>
@@ -137,7 +152,7 @@ function Navbar({
                       href={pathname}
                       locale={NavbarAvailableLanguages[language]}
                       className={cn(
-                        "flex w-full items-center gap-x-2 rounded-sm px-3 py-2 text-md hover:bg-slate-100 lg:py-2 lg:text-sm cursor-pointer",
+                        "flex w-full cursor-pointer items-center gap-x-2 rounded-sm px-3 py-2 text-md hover:bg-slate-100 lg:py-2 lg:text-sm",
                         locale === NavbarAvailableLanguages[language] &&
                           "bg-slate-200 hover:bg-slate-200",
                       )}
@@ -150,7 +165,7 @@ function Navbar({
             </DropdownMenu>
           </div>
           <Link
-            className="block text-center lg:hidden xl:block font-medium text-accent-foreground hover:text-primary group-hover:text-primary"
+            className="block text-center font-medium text-accent-foreground hover:text-primary group-hover:text-primary lg:hidden xl:block"
             href={"/who-we-serve"}
           >
             Login
@@ -164,13 +179,20 @@ function Navbar({
           </Button>
         </div>
       </div>
-      <div className="w-full overflow-hidden lg:hidden py-2">
+      <div className="w-full overflow-hidden py-2 lg:hidden">
         <div className="flex w-full items-center justify-between">
           <Logo />
-          <Menu className="size-6 text-primary" />
+          <button
+            onClick={onMobileMenuClick}
+            aria-label="Open menu"
+            aria-expanded="false"
+            className="text-primary"
+          >
+            <Menu className="size-6" />
+          </button>
         </div>
       </div>
-    </div>
+    </nav>
   );
 }
 
@@ -181,11 +203,13 @@ function NavbarMenuItem({
 }: NavbarMenuItemProps) {
   return (
     <div className="flex h-full items-center pl-4 xl:pl-7">
-      <div
+      <button
         className="group flex cursor-pointer items-center gap-x-1"
         onClick={onClick}
+        aria-expanded={isActive}
+        aria-label={`${itemTitle} menu`}
       >
-        <p
+        <span
           className={cn(
             "select-none font-medium transition-colors",
             isActive
@@ -194,17 +218,18 @@ function NavbarMenuItem({
           )}
         >
           {itemTitle}
-        </p>
+        </span>
         <ChevronDown
           className={cn(
             "size-5 transition-all",
             isActive
-              ? "text-primary rotate-180"
+              ? "rotate-180 text-primary"
               : "text-accent-foreground group-hover:text-primary",
           )}
           strokeWidth={1}
+          aria-hidden="true"
         />
-      </div>
+      </button>
     </div>
   );
 }

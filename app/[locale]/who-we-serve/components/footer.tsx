@@ -10,34 +10,42 @@ const badges = [
   {
     src: "https://imgix.tractian.com/website/components/footer/v2/front-runners.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=384",
     alt: "Front Runners",
+    id: "front-runners",
   },
   {
     src: "https://imgix.tractian.com/website/components/footer/v2/forbes-ai.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=384",
     alt: "Forbes",
+    id: "forbes",
   },
   {
     src: "https://imgix.tractian.com/website/components/footer/v2/aicpa-soc.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=384",
     alt: "AICPA",
+    id: "aicpa",
   },
   {
     src: "https://imgix.tractian.com/website/components/footer/v2/sap-partner.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=640",
     alt: "SAP",
+    id: "sap",
   },
   {
     src: "https://imgix.tractian.com/website/components/footer/v2/iso-27001.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=640",
     alt: "ISO 27001",
+    id: "iso-27001",
   },
   {
     src: "https://imgix.tractian.com/website/components/footer/v2/oracle-cloud.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=384",
     alt: "Oracle Cloud",
+    id: "oracle",
   },
   {
     src: "https://imgix.tractian.com/website/components/footer/v2/iso-9001.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=3840",
     alt: "ISO 9001",
+    id: "iso-9001",
   },
   {
     src: "https://imgix.tractian.com/website/components/footer/v2/asset-management-best-meets-requirements.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=3840",
     alt: "Best Meets Requirements",
+    id: "asset-mgmt",
   },
 ];
 

@@ -144,7 +144,7 @@
           "items": [
             { "title": "Contáctanos" },
             { "title": "Programa de referidos" },
-            { "title": "Trust Center" }
+            { "title": "Centro de Confianza" }
           ]
         }
       ]
@@ -160,17 +160,29 @@
         }
       ]
     },
-    "Demo": "Solicita una demo"
+    "Demo": "Solicita una demo",
+    "Login": "Iniciar sesión",
+    "Menu": "Menú"
   },
   "Meta": {
     "title": "Tractian para Gerentes de Planta",
     "description": "Controla mantenimiento, fortalece confiabilidad y reduce costos desde una sola plataforma. Toma decisiones rápidas, demostrando ROI."
+  },
+  "ErrorPage": {
+    "title": "¡Algo salió mal!",
+    "button": "Intenta de nuevo"
   },
   "Hero": {
     "subtitle": "Mantén la operación en marcha. Supera tus metas.",
     "title": "Para el Gerente de Planta\nque quiere liderar con\nconfianza",
     "description": "Toma decisiones más inteligentes, más rápido. Tractian te da claridad, control y confianza para liderar la operación y demostrar el ROI de tu estrategia.",
     "button": "Agenda una demo"
+  },
+  "HeroTestimonial": {
+    "quote": "Con todo centralizado en la plataforma de Tractian, finalmente tenemos la visibilidad para actuar rápido, planear mejor y demostrar resultados reales.",
+    "name": "Ricardo C.",
+    "role": "Gerente de Planta",
+    "company": "Cyplus Idesa"
   },
   "WhyChoose": {
     "subtitle": "Tractian para gerentes de planta",
@@ -474,7 +486,7 @@
         ]
       },
       "downloadApp": {
-        "title": "Download Our App",
+        "title": "Descargar Nuestra Aplicación",
         "items": [
           { "key": "appleStore", "label": "Apple Store" },
           { "key": "googlePlayStore", "label": "Google Play Store" },
@@ -491,7 +503,10 @@
     },
     "backToTop": "Volver arriba",
     "address": "Córdoba 23, Cuauhtémoc, 06700, Ciudad de México, CDMX",
-    "privacy": "Tus elecciones de privacidad"
+    "privacy": "Tus elecciones de privacidad",
+    "allRightsReserved": "Todos los derechos reservados.",
+    "privacyPolicy": "Política de Privacidad",
+    "termsOfService": "Términos de Servicio"
   },
   "RequestDemoModal": {
     "title": "Solicita Tu Demostración",

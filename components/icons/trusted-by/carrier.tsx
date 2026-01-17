@@ -6,7 +6,7 @@ export function CarrierIcon() {
       viewBox="0 0 65 26"
       width="65"
       xmlns="http://www.w3.org/2000/svg"
-      class="mx-auto"
+      className="mx-auto"
     >
       <path
         d="M32.2863 26C50.1013 26 64.5451 20.1796 64.5451 12.999C64.5451 5.81837 50.1013 0 32.2863 0C14.4712 0 0.0263672 5.8194 0.0263672 12.999C0.0263672 20.1785 14.4691 26 32.2863 26Z"

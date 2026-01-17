@@ -123,7 +123,7 @@
           "items": [
             { "title": "Atualizações de Produto" },
             { "title": "Tractian Academy" },
-            { "title": "Help Center" }
+            { "title": "Central de Ajuda" }
           ]
         }
       ]
@@ -144,7 +144,7 @@
           "items": [
             { "title": "Entre em Contato" },
             { "title": "Indicações" },
-            { "title": "Trust Center" }
+            { "title": "Centro de Confiança" }
           ]
         }
       ]
@@ -160,17 +160,29 @@
         }
       ]
     },
-    "Demo": "Demonstração"
+    "Demo": "Demonstração",
+    "Login": "Login",
+    "Menu": "Menu"
   },
   "Meta": {
     "title": "Tractian para Gerentes Industriais",
     "description": "Para Gerentes Industriais que controlam riscos, custos e desempenho. A Tractian entrega a visibilidade financeira e operacional do seu chão de fábrica."
+  },
+  "ErrorPage": {
+    "title": "Algo deu errado!",
+    "button": "Tentar novamente"
   },
   "Hero": {
     "subtitle": "Operação contínua, ROI comprovado",
     "title": "Para o Gerente Industrial\nque decide com dados,\nsem adivinhação",
     "description": "Veja riscos, custos e desempenho em tempo real. A Tractian entrega a visibilidade financeira e operacional que sustenta cada decisão e mantém a planta no ritmo certo.",
     "button": "Solicitar Demo"
+  },
+  "HeroTestimonial": {
+    "quote": "A solução da Tractian nos proporciona maior visibilidade e confiabilidade operacional, além de contribuir significativamente para o aumento da disponibilidade dos ativos e a assertividade no planejamento.",
+    "name": "Jari S.",
+    "role": "Diretor Agroindustrial",
+    "company": "UISA"
   },
   "WhyChoose": {
     "subtitle": "Por que gerentes industriais escolhem a Tractian",
@@ -461,7 +473,7 @@
           { "key": "helpCenter", "label": "Central de Ajuda" },
           { "key": "policies", "label": "Políticas" },
           { "key": "termsOfUse", "label": "Termos de Uso" },
-          { "key": "trustCenter", "label": "Trust Center" }
+          { "key": "trustCenter", "label": "Centro de Confiança" }
         ]
       },
       "about": {
@@ -475,7 +487,7 @@
         ]
       },
       "downloadApp": {
-        "title": "Download Our App",
+        "title": "Download do Aplicativo",
         "items": [
           { "key": "appleStore", "label": "Apple Store" },
           { "key": "googlePlayStore", "label": "Google Play Store" },
@@ -492,7 +504,10 @@
     },
     "backToTop": "Voltar ao topo",
     "address": "R. Amaro Guerra, 415 - Chácara Santo Antônio, São Paulo - SP, 04711-020",
-    "privacy": "Suas escolhas de privacidade"
+    "privacy": "Suas escolhas de privacidade",
+    "allRightsReserved": "Todos os direitos reservados.",
+    "privacyPolicy": "Política de Privacidade",
+    "termsOfService": "Termos de Serviço"
   },
   "RequestDemoModal": {
     "title": "Solicite Sua Demonstração",
